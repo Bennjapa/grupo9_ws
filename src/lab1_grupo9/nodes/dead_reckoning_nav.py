@@ -2,6 +2,7 @@ import rclpy
 import time
 from rclpy.node import Node
 from geometry_msgs.msg import Twist, PoseArray
+from tf_transformations import euler_from_quaternion, quaternion_from_euler
 
 class dead_reckoning_nav(Node):
     def __init__(self):
@@ -56,7 +57,13 @@ class dead_reckoning_nav(Node):
         self.aplicar_velocidad(lista_de_comandos)
 
     def accion_mover_cb(self, goal_list: PoseArray):
-        pass
+        for i in goal_list.poses:
+            x = i.position.x
+            y = i.position.y
+            roll, pitch, yaw = euler_from_quaternion(i.orientation)
+            theta = yaw
+            self.mover_robot_a_destino((x,y,theta))
+
 
     def move(self):
         self.enviar_velocidad.publish(self.speed)
