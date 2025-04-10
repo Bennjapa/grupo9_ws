@@ -1,0 +1,13 @@
+/home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator/CMakeFiles/uninstall.dir
+/home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator/CMakeFiles/very_simple_robot_simulator_uninstall.dir
+/home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator/CMakeFiles/kinect_simulator.dir
+/home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator/CMakeFiles/lidar_simulator.dir
+/home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator/CMakeFiles/ament_cmake_python_symlink_very_simple_robot_simulator.dir
+/home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator/CMakeFiles/ament_cmake_python_build_very_simple_robot_simulator_egg.dir
+/home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator/CMakeFiles/test.dir
+/home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator/CMakeFiles/edit_cache.dir
+/home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator/CMakeFiles/rebuild_cache.dir
+/home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator/CMakeFiles/list_install_components.dir
+/home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator/CMakeFiles/install.dir
+/home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator/CMakeFiles/install/local.dir
+/home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator/CMakeFiles/install/strip.dir

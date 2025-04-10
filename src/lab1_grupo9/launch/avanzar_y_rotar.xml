@@ -1,0 +1,4 @@
+<launch>
+    <include file ="$(find-pkg-share very_simple_robot_simulator)/launch/run_all.xml"/>
+    <node pkg="lab1_grupo9" exec= "dead_reckoning_nav.py" name = "dead_reckoning_nav"/>
+</launch>

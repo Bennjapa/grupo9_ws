@@ -1,0 +1,56 @@
+[0.009s] Invoking command in '/home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator -- -j12 -l12
+[0.038s] [35m[1mConsolidate compiler generated dependencies of target kinect_simulator[0m
+[0.039s] [35m[1mConsolidate compiler generated dependencies of target lidar_simulator[0m
+[0.051s] [  0%] Built target ament_cmake_python_symlink_very_simple_robot_simulator
+[0.053s] [ 50%] Built target lidar_simulator
+[0.053s] [100%] Built target kinect_simulator
+[0.200s] running egg_info
+[0.200s] writing very_simple_robot_simulator.egg-info/PKG-INFO
+[0.200s] writing dependency_links to very_simple_robot_simulator.egg-info/dependency_links.txt
+[0.201s] writing top-level names to very_simple_robot_simulator.egg-info/top_level.txt
+[0.202s] reading manifest file 'very_simple_robot_simulator.egg-info/SOURCES.txt'
+[0.202s] writing manifest file 'very_simple_robot_simulator.egg-info/SOURCES.txt'
+[0.222s] [100%] Built target ament_cmake_python_build_very_simple_robot_simulator_egg
+[0.230s] Invoked command in '/home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator -- -j12 -l12
+[0.230s] Invoking command in '/home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator
+[0.236s] -- Install configuration: ""
+[0.236s] -- Execute custom install script
+[0.236s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/lib/very_simple_robot_simulator/kinect_simulator
+[0.236s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/lib/very_simple_robot_simulator/lidar_simulator
+[0.236s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/environment/pythonpath.sh
+[0.236s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/environment/pythonpath.dsv
+[0.237s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/local/lib/python3.10/dist-packages/very_simple_robot_simulator-0.0.0-py3.10.egg-info/PKG-INFO
+[0.237s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/local/lib/python3.10/dist-packages/very_simple_robot_simulator-0.0.0-py3.10.egg-info/SOURCES.txt
+[0.237s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/local/lib/python3.10/dist-packages/very_simple_robot_simulator-0.0.0-py3.10.egg-info/dependency_links.txt
+[0.237s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/local/lib/python3.10/dist-packages/very_simple_robot_simulator-0.0.0-py3.10.egg-info/top_level.txt
+[0.237s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/local/lib/python3.10/dist-packages/very_simple_robot_simulator/__init__.py
+[0.237s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/lib/very_simple_robot_simulator/kinect_simulator.py
+[0.237s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/lib/very_simple_robot_simulator/kobuki_simulator.py
+[0.237s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/lib/very_simple_robot_simulator/lidar_simulator.py
+[0.237s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/lib/very_simple_robot_simulator/rangefinder.py
+[0.237s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/lib/very_simple_robot_simulator/utils.py
+[0.237s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/lib/very_simple_robot_simulator/world_state_gui.py
+[0.237s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator//launch/lidar_simulator.xml
+[0.237s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator//launch/minimal_simulator.xml
+[0.238s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator//launch/minimal_simulator_py.xml
+[0.238s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator//launch/openni_simulator.xml
+[0.238s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator//launch/openni_simulator_py.xml
+[0.238s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator//launch/run_all.xml
+[0.238s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator//launch/world_state.xml
+[0.238s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/ament_index/resource_index/package_run_dependencies/very_simple_robot_simulator
+[0.238s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/ament_index/resource_index/parent_prefix_path/very_simple_robot_simulator
+[0.238s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/environment/ament_prefix_path.sh
+[0.238s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/environment/ament_prefix_path.dsv
+[0.238s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/environment/path.sh
+[0.238s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/environment/path.dsv
+[0.238s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/local_setup.bash
+[0.238s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/local_setup.sh
+[0.238s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/local_setup.zsh
+[0.239s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/local_setup.dsv
+[0.239s] -- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/package.dsv
+[0.245s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/ament_index/resource_index/packages/very_simple_robot_simulator
+[0.245s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/cmake/very_simple_robot_simulatorConfig.cmake
+[0.245s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/cmake/very_simple_robot_simulatorConfig-version.cmake
+[0.245s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/package.xml
+[0.265s] Listing '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/local/lib/python3.10/dist-packages/very_simple_robot_simulator'...
+[0.269s] Invoked command in '/home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator

@@ -1,0 +1,1 @@
+/home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator/ament_cmake_environment_hooks/local_setup.bash

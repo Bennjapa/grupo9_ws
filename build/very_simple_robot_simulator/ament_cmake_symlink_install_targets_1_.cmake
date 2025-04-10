@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator/lidar_simulator" "TARGETS" "lidar_simulator" "DESTINATION" "lib/very_simple_robot_simulator")

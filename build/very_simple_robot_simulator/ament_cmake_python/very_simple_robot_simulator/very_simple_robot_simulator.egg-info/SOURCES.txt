@@ -1,0 +1,6 @@
+setup.py
+very_simple_robot_simulator/__init__.py
+very_simple_robot_simulator.egg-info/PKG-INFO
+very_simple_robot_simulator.egg-info/SOURCES.txt
+very_simple_robot_simulator.egg-info/dependency_links.txt
+very_simple_robot_simulator.egg-info/top_level.txt

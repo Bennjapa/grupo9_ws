@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>very_simple_robot_simulator</name>
+  <version>0.0.0</version>
+  <description>TODO: Package description</description>
+  <maintainer email="gasevi@todo.todo">gasevi</maintainer>
+  <license>TODO: License declaration</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_cmake_python</buildtool_depend>
+  <buildtool_depend>libopencv-dev</buildtool_depend>
+  <buildtool_depend>python3-transforms3d</buildtool_depend>
+  <!--<buildtool_depend>ros-humble-image-transport</buildtool_depend>
+  <buildtool_depend>libcv-bridge-dev</buildtool_depend>
+  <buildtool_depend>ros-humble-tf-transformations</buildtool_depend>
+  <buildtool_depend>python3-pil.imagetk</buildtool_depend>
+  <buildtool_depend>python3-opencv</buildtool_depend>
+  <buildtool_depend>ros-humble-cv-bridge</buildtool_depend>-->
+
+  <depend>rclcpp</depend>
+  <depend>rclpy</depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+
+  <exec_depend>ros2launch</exec_depend>
+
+</package>

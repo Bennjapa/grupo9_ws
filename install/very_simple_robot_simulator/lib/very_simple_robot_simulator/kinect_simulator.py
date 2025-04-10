@@ -1,0 +1,1 @@
+/home/benjaminuc/Desktop/grupo9_ws/src/very_simple_robot_simulator/scripts/kinect_simulator.py
