@@ -5,7 +5,7 @@ import time
 from rclpy.node import Node
 from geometry_msgs.msg import Twist, PoseArray
 from tf_transformations import euler_from_quaternion, quaternion_from_euler
-from threading import Thread
+from threading import Timer
 
 
 class dead_reckoning_nav(Node):
@@ -13,6 +13,7 @@ class dead_reckoning_nav(Node):
         super().__init__("dead_reckoning_nav")
         self.max_v = 0.2 # [m/s] maxima velocidad lineal
         self.max_w = 1.0 # [rad/s] maxima velocidad angular
+        self.t = 0
         
         #Creamos nuestro publisher de velocidad
         self.enviar_velocidad = self.create_publisher(
@@ -35,14 +36,14 @@ class dead_reckoning_nav(Node):
         #Creamos un timer que estara enviando velocidades cada 0.2 segundos
         self.timer_mover = self.create_timer(0.2, self.move)
 
-
     def aplicar_velocidad(self, speed_command_list):
         #Speed_command_list = (v,w,t) (velocidad, velocidad angular, tiempo)
         for i in  speed_command_list:
-            self.speed.linear.x = i[0]
-            self.speed.angular.z = i[1]
-            #Falta arreglar esto para que se envien los comandos de velocidad a un
-            #tiempo determinado el cual viene en el indice 3
+            timer = Timer(self.t, self.asignar_velocidad, args=(i[0], i[1]))
+            timer.start()
+            self.t += i[2]
+        timer = Timer(self.t, self.asignar_velocidad, args=(0.0, 0.0))
+        timer.start()
     
     def mover_robot_a_destino(self, goal_pose):
         #goal_pose = (x,y,theta) es la posicion a la que se quiere llegar 
@@ -52,10 +53,27 @@ class dead_reckoning_nav(Node):
         t1 = x/self.max_v
         t2 = theta/self.max_w
         t3 = y/self.max_v
+        x_v = 0
+        y_v = 0
+        w = 0
+        
+        if x < 0:
+            x_v = -self.max_v
+        else: 
+            x_v = self.max_v
+        if y < 0:
+            y_v = -self.max_v
+        else: 
+            y_v = self.max_v
+        if theta < 0:
+            w = -self.max_w
+        else:
+            w = self.max_w
+
         lista_de_comandos = [
-            (self.max_v, 0.0, abs(t1)),
-            (0.0, self.max_w, abs(t2)),
-            (self.max_v, 0.0, abs(t3))
+            (x_v, 0.0, abs(t1)),
+            (0.0, w, abs(t2)),
+            (y_v, 0.0, abs(t3))
         ]
         self.aplicar_velocidad(lista_de_comandos)
 
@@ -68,9 +86,14 @@ class dead_reckoning_nav(Node):
             theta = yaw
             self.mover_robot_a_destino((x,y,theta))
 
-
     def move(self):
         self.enviar_velocidad.publish(self.speed)
+
+    def asignar_velocidad(self, v, w):
+        self.speed.linear.x = v
+        self.speed.angular.z = w
+
+
 
 if __name__ == "__main__":
     rclpy.init()
