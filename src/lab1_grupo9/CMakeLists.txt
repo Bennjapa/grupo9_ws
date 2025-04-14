@@ -12,7 +12,10 @@ find_package(ament_cmake REQUIRED)
 # find_package(<dependency> REQUIRED)
 
 #install Python executables
-install(PROGRAMS nodes/dead_reckoning_nav.py
+install(PROGRAMS
+	nodes/dead_reckoning_nav.py
+	nodes/pose_loader.py
+	nodes/kinect_node.py
 	DESTINATION lib/${PROJECT_NAME})
 
 #install launch files
