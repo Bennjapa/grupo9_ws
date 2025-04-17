@@ -1,0 +1,6 @@
+<launch>
+
+<node pkg="lab_1_grupo9" exec="dead_reckoning_nav_mod.py" name="navigation_node" />
+<node pkg="lab_1_grupo9" exec="kinect_node.py" name="kinect_node" />
+
+</launch>
