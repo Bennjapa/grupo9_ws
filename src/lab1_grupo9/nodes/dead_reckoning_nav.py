@@ -3,17 +3,17 @@
 import rclpy
 import time
 from rclpy.node import Node
-from geometry_msgs.msg import Twist, PoseArray
+from geometry_msgs.msg import Twist, PoseArray, Pose
 from tf_transformations import euler_from_quaternion, quaternion_from_euler
 from threading import Timer
-
+from nav_msgs.msg import Odometry
 
 class dead_reckoning_nav(Node):
     def __init__(self):
         super().__init__("dead_reckoning_nav")
         self.max_v = 0.2 # [m/s] maxima velocidad lineal
         self.max_w = 1.0 # [rad/s] maxima velocidad angular
-        self.t = 0
+        self.t = 0.0
         
         #Creamos nuestro publisher de velocidad
         self.enviar_velocidad = self.create_publisher(
@@ -21,6 +21,7 @@ class dead_reckoning_nav(Node):
             "/cmd_vel_mux/input/navigation",
             10
         )
+
         self.recibir_poses = self.create_subscription(
             PoseArray,
             "goal_list",
@@ -28,13 +29,21 @@ class dead_reckoning_nav(Node):
             10
         )
 
+        self.pose_sub = self.create_subscription(Pose, "/real_pose", self.registro_realpose, 10)
+        self.odom_sub = self.create_subscription(Odometry, "/odom", self.registro_odometry, 10)
+
         #Creamos nuestro mensaje de velocidad
         self.speed = Twist()
         self.speed.linear.x = 0.0
         self.speed.angular.z = 0.0
 
-        #Creamos un timer que estara enviando velocidades cada 0.2 segundos
-        self.timer_mover = self.create_timer(0.2, self.move)
+        with open(f"odom_poses.txt", "w") as file:
+            file.write("")
+        with open(f"real_poses.txt", "w") as file:
+            file.write("")
+
+        #Creamos un timer que estara enviando velocidades cada 0.1 segundos
+        self.timer_mover = self.create_timer(0.1, self.move)
 
     def aplicar_velocidad(self, speed_command_list):
         #Speed_command_list = (v,w,t) (velocidad, velocidad angular, tiempo)
@@ -50,12 +59,12 @@ class dead_reckoning_nav(Node):
         x = float(goal_pose[0])
         y = float(goal_pose[1])
         theta = float(goal_pose[2])
-        t1 = x/self.max_v
-        t2 = theta/self.max_w
-        t3 = y/self.max_v
-        x_v = 0
-        y_v = 0
-        w = 0
+        t1 = (x/self.max_v) 
+        t2 = (theta/self.max_w)
+        t3 = (y/self.max_v) 
+        #1.105 esta bueno
+        factor_correct = 1.105
+        t2_c = t2 * factor_correct
         
         if x < 0:
             x_v = -self.max_v
@@ -69,10 +78,10 @@ class dead_reckoning_nav(Node):
             w = -self.max_w
         else:
             w = self.max_w
-
+        self.get_logger().info(f"t1: {t1}, t2: {t2}, t3: {t3}")
         lista_de_comandos = [
             (x_v, 0.0, abs(t1)),
-            (0.0, w, abs(t2)),
+            (0.0, w, abs(t2_c)),
             (y_v, 0.0, abs(t3))
         ]
         self.aplicar_velocidad(lista_de_comandos)
@@ -92,7 +101,14 @@ class dead_reckoning_nav(Node):
     def asignar_velocidad(self, v, w):
         self.speed.linear.x = v
         self.speed.angular.z = w
+    
+    def registro_realpose(self, real_pose : Pose):
+        with open(f"real_poses.txt", "a") as file:
+            file.write(f"{real_pose.position.x},{real_pose.position.y}\n")
 
+    def registro_odometry(self, odom : Odometry):
+        with open(f"odom_poses.txt", "a") as file:
+            file.write(f"{odom.pose.pose.position.x},{odom.pose.pose.position.y}\n")
 
 
 if __name__ == "__main__":
