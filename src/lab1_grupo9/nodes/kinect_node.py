@@ -40,7 +40,7 @@ class obstacle_detector(Node):
         zona_derecha = self.current_cv_depth_image[:, 2*tercio:]
 
         def hay_obstaculo(zona):
-            return np.any((zona > 0.0) & (zona <= profundidad_max))
+            return np.any((zona >= 0.0) & (zona <= profundidad_max))
         izquierda = 1.0 if hay_obstaculo(zona_izquierda) else 0.0
         centro = 1.0 if hay_obstaculo(zona_central) else 0.0
         derecha = 1.0 if hay_obstaculo(zona_derecha) else 0.0
