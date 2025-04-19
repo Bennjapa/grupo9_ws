@@ -3,7 +3,7 @@
 import rclpy
 import time
 from rclpy.node import Node
-from geometry_msgs.msg import Twist, PoseArray, Pose
+from geometry_msgs.msg import Twist, PoseArray, Pose, Vector3
 from tf_transformations import euler_from_quaternion, quaternion_from_euler
 from threading import Timer
 from nav_msgs.msg import Odometry
@@ -14,6 +14,7 @@ class dead_reckoning_nav(Node):
         self.max_v = 0.2 # [m/s] maxima velocidad lineal
         self.max_w = 1.0 # [rad/s] maxima velocidad angular
         self.t = 0.0
+        self.hay_obstaculo = False
         
         #Creamos nuestro publisher de velocidad
         self.enviar_velocidad = self.create_publisher(
@@ -26,6 +27,12 @@ class dead_reckoning_nav(Node):
             PoseArray,
             "goal_list",
             self.accion_mover_cb,
+            10
+        )
+        self.recibir_obstaculos = self.create_subscription(
+            Vector3,
+            "/occupancy_state",
+            self.accion_obstaculo_cb,
             10
         )
 
@@ -99,8 +106,19 @@ class dead_reckoning_nav(Node):
         self.enviar_velocidad.publish(self.speed)
 
     def asignar_velocidad(self, v, w):
-        self.speed.linear.x = v
-        self.speed.angular.z = w
+        if not self.hay_obstaculo:
+            self.get_logger().info(f"Asignando velocidad: v={v}, w={w}")
+            self.speed.linear.x = v
+            self.speed.angular.z = w
+
+    def accion_obstaculo_cb(self, vector: Vector3):
+        if vector.x == 1.0 or vector.y == 1.0 or vector.z == 1.0:
+            self.get_logger().warn("Obstáculo detectado")
+            self.hay_obstaculo = True
+            self.speed.linear.x = 0.0
+            self.speed.angular.z = 0.0
+        else:
+            self.hay_obstaculo = False
     
     def registro_realpose(self, real_pose : Pose):
         with open(f"real_poses.txt", "a") as file:
