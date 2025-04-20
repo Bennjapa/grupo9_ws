@@ -8,6 +8,9 @@ from kobuki_ros_interfaces.msg import BumperEvent
 
 import sys
 import select
+import tty
+import termios
+import os
 
 class TeleOperacion( Node ):
 
@@ -38,6 +41,10 @@ class TeleOperacion( Node ):
             self.detectar_choque,
             10
         )
+
+        # Cofigurar el terminal
+        self.fd = sys.stdin.fileno()
+        self.config_vieja = self.terminal_modo_rafaga()
         
         #Creamos un timer que estará administrando las velocidades cada 0.1 segundos segun la tecla recibida
         self.timer_mover = self.create_timer(0.1, self.admin_movement)
@@ -49,6 +56,7 @@ class TeleOperacion( Node ):
         """
         if select.select([sys.stdin], [], [], 0.0)[0]:
             self.tecla = sys.stdin.read(1)
+            self.vaciar_entradas()
         self.detectar_tecla()
     
     def detectar_choque(self, bumper: BumperEvent):
@@ -116,11 +124,24 @@ class TeleOperacion( Node ):
         """
         self.enviar_velocidad.publish(self.speed)
     
+    def terminal_modo_rafaga(self):
+        config_vieja = termios.tcgetattr(self.fd)
+        tty.setcbreak(self.fd)
+        return config_vieja
+    
+    def restaurar_terminal(self):
+        termios.tcsetattr(self.fd, termios.TCSADRAIN, self.config_vieja)
+    
+    def vaciar_entradas(self):
+        while select.select([sys.stdin], [], [], 0.0)[0]:
+            os.read(sys.stdin.fileno(), 1)
 
 
 if __name__ == '__main__':
-  rclpy.init()
-  teleoperador_node = TeleOperacion()
-  rclpy.spin( teleoperador_node )
-  teleoperador_node.destroy_node()
-  rclpy.shutdown()
+  
+    rclpy.init()
+    teleoperador_node = TeleOperacion()
+    rclpy.spin( teleoperador_node )
+    teleoperador_node.restaurar_terminal()
+    teleoperador_node.destroy_node()
+    rclpy.shutdown()
