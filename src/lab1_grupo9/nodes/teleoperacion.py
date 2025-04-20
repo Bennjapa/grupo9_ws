@@ -43,8 +43,9 @@ class TeleOperacion( Node ):
         )
 
         # Cofigurar el terminal
-        self.fd = sys.stdin.fileno()
-        self.config_vieja = self.terminal_modo_rafaga()
+        self.fd = sys.stdin.fileno() # Obtiene el tipo de "file" que es la entrada
+        self.config_vieja = self.terminal_modo_rafaga() # Guarda la configuración inicial de la terminal
+                                                        # para restaurarla luego
         
         #Creamos un timer que estará administrando las velocidades cada 0.1 segundos segun la tecla recibida
         self.timer_mover = self.create_timer(0.1, self.admin_movement)
@@ -125,16 +126,29 @@ class TeleOperacion( Node ):
         self.enviar_velocidad.publish(self.speed)
     
     def terminal_modo_rafaga(self):
-        config_vieja = termios.tcgetattr(self.fd)
-        tty.setcbreak(self.fd)
+        """
+        Cambia el terminal a un modo en que se envía cada entrada que se le coloque.
+        También, retorna la configuración inicial del terminal, para restaurarla luego.
+        """
+        config_vieja = termios.tcgetattr(self.fd) # Obtiene la configuración inicial
+        tty.setcbreak(self.fd) # Método que activa la terminal en "cascada"
         return config_vieja
     
     def restaurar_terminal(self):
-        termios.tcsetattr(self.fd, termios.TCSADRAIN, self.config_vieja)
+        """
+        Restaura la configuración del terminal a su estado previo una vez terminado
+        el código.
+        """
+        termios.tcsetattr(self.fd, termios.TCSADRAIN, self.config_vieja) # 'setea' la terminal
     
     def vaciar_entradas(self):
+        """
+        Evita que se acumulen entradas del teclado en una cola que, debido al timer,
+        crecería si se mantiene presionada la tecla, pero esto lo evita.
+        """
         while select.select([sys.stdin], [], [], 0.0)[0]:
-            os.read(sys.stdin.fileno(), 1)
+            # Mientras haya entradas existentes en la cola ejecutar:
+            os.read(sys.stdin.fileno(), 1) # Lee byte a byte de la cola
 
 
 if __name__ == '__main__':
