@@ -26,7 +26,7 @@ class TeleOperacion( Node ):
         #Creamos nuestro publisher de velocidad
         self.enviar_velocidad = self.create_publisher(
             Twist,
-            "/cmd_vel_mux/input/navigation",
+            "/commands/velocity",
             10
         )
         # Creamos el mensaje para este tópico
@@ -58,6 +58,8 @@ class TeleOperacion( Node ):
         if select.select([sys.stdin], [], [], 0.0)[0]:
             self.tecla = sys.stdin.read(1)
             self.vaciar_entradas()
+        else:
+            self.tecla = ""
         self.detectar_tecla()
     
     def detectar_choque(self, bumper: BumperEvent):
