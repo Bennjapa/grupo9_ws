@@ -7,6 +7,8 @@ from rclpy.node import Node
 from tf_transformations import quaternion_from_euler
 import math
 import sys
+from ament_index_python.packages import get_package_share_directory
+import os
 
 class pose_loader(Node):
     
@@ -21,7 +23,11 @@ class pose_loader(Node):
         self.leer_poses()
     
     def leer_poses(self):
-        with open("posiciones.txt", "r") as file:
+        ruta_base = get_package_share_directory('lab1_grupo9')
+        ruta_txt = os.path.join(ruta_base, 'posiciones.txt')
+        #obtengo el path de esta forma por un error que salia al usar launch
+        
+        with open(ruta_txt, "r") as file:
             posiciones = file.readlines()
             posiciones_procesadas = []
 
