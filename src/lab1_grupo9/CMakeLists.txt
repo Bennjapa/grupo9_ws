@@ -16,7 +16,7 @@ install(PROGRAMS
 	nodes/dead_reckoning_nav.py
 	nodes/pose_loader.py
 	nodes/kinect_node.py
- 	nodes/dead_reckoning_nav_mod.py
+	nodes/teleoperacion.py
 	DESTINATION lib/${PROJECT_NAME})
 
 #install launch files

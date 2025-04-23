@@ -118,6 +118,9 @@ class TeleOperacion( Node ):
             else:
                 self.speed.linear.x = 0.0
                 self.speed.angular.z = 0.0
+        else: 
+            self.speed.linear.x = 0.0
+            self.speed.angular.z = 0.0
 
         self.move()
 
