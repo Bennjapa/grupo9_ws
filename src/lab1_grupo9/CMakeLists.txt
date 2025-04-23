@@ -22,6 +22,11 @@ install(PROGRAMS
 #install launch files
 install(DIRECTORY launch DESTINATION share/${PROJECT_NAME}/)
 
+install(
+  	FILES posiciones.txt
+  	DESTINATION share/${PROJECT_NAME}
+)
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights
