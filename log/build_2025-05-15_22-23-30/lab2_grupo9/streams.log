@@ -1,0 +1,30 @@
+[0.012s] Invoking command in '/home/benjaminuc/Desktop/grupo9_ws/build/lab2_grupo9': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/benjaminuc/Desktop/grupo9_ws/build/lab2_grupo9 -- -j12 -l12
+[0.043s] Invoked command in '/home/benjaminuc/Desktop/grupo9_ws/build/lab2_grupo9' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/benjaminuc/Desktop/grupo9_ws/build/lab2_grupo9 -- -j12 -l12
+[0.045s] Invoking command in '/home/benjaminuc/Desktop/grupo9_ws/build/lab2_grupo9': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/benjaminuc/Desktop/grupo9_ws/build/lab2_grupo9
+[0.050s] -- Install configuration: ""
+[0.051s] -- Execute custom install script
+[0.051s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/lib/lab2_grupo9/dead_reckoning_nav.py
+[0.051s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/lib/lab2_grupo9/pose_loader.py
+[0.051s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/lib/lab2_grupo9/p_controller.py
+[0.051s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/lib/lab2_grupo9/p_controller_w.py
+[0.052s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/lib/lab2_grupo9/pi_controller.py
+[0.052s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/lib/lab2_grupo9/pi_controller_w.py
+[0.052s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9//launch/avanzar_y_rotar_ctrl.xml
+[0.052s] -- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9//launch/pi_avanzar_y_rotar_ctrl.xml
+[0.058s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/posiciones.txt
+[0.058s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/ament_index/resource_index/package_run_dependencies/lab2_grupo9
+[0.058s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/ament_index/resource_index/parent_prefix_path/lab2_grupo9
+[0.058s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/environment/ament_prefix_path.sh
+[0.058s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/environment/ament_prefix_path.dsv
+[0.058s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/environment/path.sh
+[0.058s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/environment/path.dsv
+[0.058s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/local_setup.bash
+[0.058s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/local_setup.sh
+[0.058s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/local_setup.zsh
+[0.058s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/local_setup.dsv
+[0.059s] -- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/package.dsv
+[0.064s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/ament_index/resource_index/packages/lab2_grupo9
+[0.064s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/cmake/lab2_grupo9Config.cmake
+[0.064s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/cmake/lab2_grupo9Config-version.cmake
+[0.064s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/package.xml
+[0.088s] Invoked command in '/home/benjaminuc/Desktop/grupo9_ws/build/lab2_grupo9' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/benjaminuc/Desktop/grupo9_ws/build/lab2_grupo9

@@ -1,0 +1,11 @@
+[0.010s] Invoking command in '/home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator -- -j12 -l12
+[0.047s] [  0%] Built target ament_cmake_python_symlink_very_simple_robot_simulator
+[0.047s] [ 50%] Built target lidar_simulator
+[0.048s] [100%] Built target kinect_simulator
+[0.194s] running egg_info
+[0.195s] writing very_simple_robot_simulator.egg-info/PKG-INFO
+[0.195s] writing dependency_links to very_simple_robot_simulator.egg-info/dependency_links.txt
+[0.195s] writing top-level names to very_simple_robot_simulator.egg-info/top_level.txt
+[0.196s] reading manifest file 'very_simple_robot_simulator.egg-info/SOURCES.txt'
+[0.197s] writing manifest file 'very_simple_robot_simulator.egg-info/SOURCES.txt'
+[0.214s] [100%] Built target ament_cmake_python_build_very_simple_robot_simulator_egg

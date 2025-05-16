@@ -1,0 +1,7 @@
+<launch>
+    <include file ="$(find-pkg-share very_simple_robot_simulator)/launch/run_all.xml"/>
+    <node pkg="lab2_grupo9" exec= "dead_reckoning_nav.py" name = "dead_reckoning_nav"/>
+    <node pkg="lab2_grupo9" exec= "pose_loader.py" name = "pose_loader"/>
+    <node pkg="lab2_grupo9" exec= "pi_controller.py" name = "p_controller"/>
+    <node pkg="lab2_grupo9" exec= "pi_controller_w.py" name = "p_controller_w"/>
+</launch>

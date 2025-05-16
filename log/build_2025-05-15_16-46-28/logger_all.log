@@ -1,0 +1,344 @@
+[0.064s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.064s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f2537e55e10>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f2537e55960>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f2537e55960>>, mixin_verb=('build',))
+[0.189s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.189s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.189s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.189s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.189s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.189s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.189s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/benjaminuc/Desktop/grupo9_ws'
+[0.189s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.189s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.189s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.189s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.189s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.189s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.189s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.189s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.189s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src/cmd_vel_mux) by extensions ['ignore', 'ignore_ament_install']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src/cmd_vel_mux) by extension 'ignore'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src/cmd_vel_mux) by extension 'ignore_ament_install'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src/cmd_vel_mux) by extensions ['colcon_pkg']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src/cmd_vel_mux) by extension 'colcon_pkg'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src/cmd_vel_mux) by extensions ['colcon_meta']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src/cmd_vel_mux) by extension 'colcon_meta'
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src/cmd_vel_mux) by extensions ['ros']
+[0.197s] Level 1:colcon.colcon_core.package_identification:_identify(src/cmd_vel_mux) by extension 'ros'
+[0.199s] DEBUG:colcon.colcon_core.package_identification:Package 'src/cmd_vel_mux' with type 'ros.ament_cmake' and name 'cmd_vel_mux'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_grupo9) by extensions ['ignore', 'ignore_ament_install']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_grupo9) by extension 'ignore'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_grupo9) by extension 'ignore_ament_install'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_grupo9) by extensions ['colcon_pkg']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_grupo9) by extension 'colcon_pkg'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_grupo9) by extensions ['colcon_meta']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_grupo9) by extension 'colcon_meta'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_grupo9) by extensions ['ros']
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_grupo9) by extension 'ros'
+[0.199s] DEBUG:colcon.colcon_core.package_identification:Package 'src/lab1_grupo9' with type 'ros.ament_cmake' and name 'lab1_grupo9'
+[0.199s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab2_grupo9) by extensions ['ignore', 'ignore_ament_install']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab2_grupo9) by extension 'ignore'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab2_grupo9) by extension 'ignore_ament_install'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab2_grupo9) by extensions ['colcon_pkg']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab2_grupo9) by extension 'colcon_pkg'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab2_grupo9) by extensions ['colcon_meta']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab2_grupo9) by extension 'colcon_meta'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab2_grupo9) by extensions ['ros']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab2_grupo9) by extension 'ros'
+[0.200s] DEBUG:colcon.colcon_core.package_identification:Package 'src/lab2_grupo9' with type 'ros.ament_cmake' and name 'lab2_grupo9'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/very_simple_robot_simulator) by extensions ['ignore', 'ignore_ament_install']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/very_simple_robot_simulator) by extension 'ignore'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/very_simple_robot_simulator) by extension 'ignore_ament_install'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/very_simple_robot_simulator) by extensions ['colcon_pkg']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/very_simple_robot_simulator) by extension 'colcon_pkg'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/very_simple_robot_simulator) by extensions ['colcon_meta']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/very_simple_robot_simulator) by extension 'colcon_meta'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/very_simple_robot_simulator) by extensions ['ros']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(src/very_simple_robot_simulator) by extension 'ros'
+[0.201s] DEBUG:colcon.colcon_core.package_identification:Package 'src/very_simple_robot_simulator' with type 'ros.ament_cmake' and name 'very_simple_robot_simulator'
+[0.201s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.201s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.201s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.201s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.201s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.220s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.220s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.221s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/benjaminuc/Desktop/ros2_ws/install
+[0.221s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/benjaminuc/Desktop/grupo9_ws/install
+[0.222s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 275 installed packages in /opt/ros/humble
+[0.223s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'cmd_vel_mux' build argument 'cmake_args' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'cmd_vel_mux' build argument 'cmake_target' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'cmd_vel_mux' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'cmd_vel_mux' build argument 'cmake_clean_cache' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'cmd_vel_mux' build argument 'cmake_clean_first' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'cmd_vel_mux' build argument 'cmake_force_configure' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'cmd_vel_mux' build argument 'ament_cmake_args' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'cmd_vel_mux' build argument 'catkin_cmake_args' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'cmd_vel_mux' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.244s] DEBUG:colcon.colcon_core.verb:Building package 'cmd_vel_mux' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/benjaminuc/Desktop/grupo9_ws/build/cmd_vel_mux', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux', 'merge_install': False, 'path': '/home/benjaminuc/Desktop/grupo9_ws/src/cmd_vel_mux', 'symlink_install': True, 'test_result_base': None}
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'lab1_grupo9' build argument 'cmake_args' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'lab1_grupo9' build argument 'cmake_target' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'lab1_grupo9' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'lab1_grupo9' build argument 'cmake_clean_cache' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'lab1_grupo9' build argument 'cmake_clean_first' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'lab1_grupo9' build argument 'cmake_force_configure' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'lab1_grupo9' build argument 'ament_cmake_args' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'lab1_grupo9' build argument 'catkin_cmake_args' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'lab1_grupo9' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.244s] DEBUG:colcon.colcon_core.verb:Building package 'lab1_grupo9' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/benjaminuc/Desktop/grupo9_ws/build/lab1_grupo9', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9', 'merge_install': False, 'path': '/home/benjaminuc/Desktop/grupo9_ws/src/lab1_grupo9', 'symlink_install': True, 'test_result_base': None}
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'lab2_grupo9' build argument 'cmake_args' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'lab2_grupo9' build argument 'cmake_target' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'lab2_grupo9' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'lab2_grupo9' build argument 'cmake_clean_cache' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'lab2_grupo9' build argument 'cmake_clean_first' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'lab2_grupo9' build argument 'cmake_force_configure' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'lab2_grupo9' build argument 'ament_cmake_args' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'lab2_grupo9' build argument 'catkin_cmake_args' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'lab2_grupo9' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.245s] DEBUG:colcon.colcon_core.verb:Building package 'lab2_grupo9' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/benjaminuc/Desktop/grupo9_ws/build/lab2_grupo9', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9', 'merge_install': False, 'path': '/home/benjaminuc/Desktop/grupo9_ws/src/lab2_grupo9', 'symlink_install': True, 'test_result_base': None}
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'very_simple_robot_simulator' build argument 'cmake_args' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'very_simple_robot_simulator' build argument 'cmake_target' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'very_simple_robot_simulator' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'very_simple_robot_simulator' build argument 'cmake_clean_cache' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'very_simple_robot_simulator' build argument 'cmake_clean_first' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'very_simple_robot_simulator' build argument 'cmake_force_configure' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'very_simple_robot_simulator' build argument 'ament_cmake_args' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'very_simple_robot_simulator' build argument 'catkin_cmake_args' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'very_simple_robot_simulator' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.245s] DEBUG:colcon.colcon_core.verb:Building package 'very_simple_robot_simulator' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator', 'merge_install': False, 'path': '/home/benjaminuc/Desktop/grupo9_ws/src/very_simple_robot_simulator', 'symlink_install': True, 'test_result_base': None}
+[0.245s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.246s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.246s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/benjaminuc/Desktop/grupo9_ws/src/cmd_vel_mux' with build type 'ament_cmake'
+[0.246s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/benjaminuc/Desktop/grupo9_ws/src/cmd_vel_mux'
+[0.247s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.247s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.247s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.250s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/benjaminuc/Desktop/grupo9_ws/src/lab1_grupo9' with build type 'ament_cmake'
+[0.250s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/benjaminuc/Desktop/grupo9_ws/src/lab1_grupo9'
+[0.250s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.250s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.252s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/benjaminuc/Desktop/grupo9_ws/src/lab2_grupo9' with build type 'ament_cmake'
+[0.252s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/benjaminuc/Desktop/grupo9_ws/src/lab2_grupo9'
+[0.252s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.252s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.254s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/benjaminuc/Desktop/grupo9_ws/src/very_simple_robot_simulator' with build type 'ament_cmake'
+[0.254s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/benjaminuc/Desktop/grupo9_ws/src/very_simple_robot_simulator'
+[0.254s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.254s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.260s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/benjaminuc/Desktop/grupo9_ws/build/cmd_vel_mux': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/benjaminuc/Desktop/grupo9_ws/build/cmd_vel_mux -- -j12 -l12
+[0.262s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/benjaminuc/Desktop/grupo9_ws/build/lab1_grupo9': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/benjaminuc/Desktop/grupo9_ws/build/lab1_grupo9 -- -j12 -l12
+[0.264s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/benjaminuc/Desktop/grupo9_ws/build/lab2_grupo9': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/benjaminuc/Desktop/grupo9_ws/src/lab2_grupo9 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9
+[0.267s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator -- -j12 -l12
+[0.493s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/benjaminuc/Desktop/grupo9_ws/build/lab1_grupo9' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/benjaminuc/Desktop/grupo9_ws/build/lab1_grupo9 -- -j12 -l12
+[0.503s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/benjaminuc/Desktop/grupo9_ws/build/lab1_grupo9': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/benjaminuc/Desktop/grupo9_ws/build/lab1_grupo9
+[0.546s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lab1_grupo9)
+[0.546s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/benjaminuc/Desktop/grupo9_ws/build/lab1_grupo9' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/benjaminuc/Desktop/grupo9_ws/build/lab1_grupo9
+[0.547s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9' for CMake module files
+[0.548s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9' for CMake config files
+[0.548s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab1_grupo9', 'cmake_prefix_path')
+[0.548s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9/share/lab1_grupo9/hook/cmake_prefix_path.ps1'
+[0.549s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9/share/lab1_grupo9/hook/cmake_prefix_path.dsv'
+[0.549s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9/share/lab1_grupo9/hook/cmake_prefix_path.sh'
+[0.550s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9/lib'
+[0.550s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9/bin'
+[0.550s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9/lib/pkgconfig/lab1_grupo9.pc'
+[0.550s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9/lib/python3.10/site-packages'
+[0.550s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9/bin'
+[0.550s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9/share/lab1_grupo9/package.ps1'
+[0.551s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9/share/lab1_grupo9/package.dsv'
+[0.551s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9/share/lab1_grupo9/package.sh'
+[0.552s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9/share/lab1_grupo9/package.bash'
+[0.552s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9/share/lab1_grupo9/package.zsh'
+[0.553s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9/share/colcon-core/packages/lab1_grupo9)
+[0.553s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lab1_grupo9)
+[0.553s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9' for CMake module files
+[0.553s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9' for CMake config files
+[0.554s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab1_grupo9', 'cmake_prefix_path')
+[0.554s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9/share/lab1_grupo9/hook/cmake_prefix_path.ps1'
+[0.554s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9/share/lab1_grupo9/hook/cmake_prefix_path.dsv'
+[0.554s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9/share/lab1_grupo9/hook/cmake_prefix_path.sh'
+[0.554s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9/lib'
+[0.554s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9/bin'
+[0.554s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9/lib/pkgconfig/lab1_grupo9.pc'
+[0.555s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9/lib/python3.10/site-packages'
+[0.555s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9/bin'
+[0.555s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9/share/lab1_grupo9/package.ps1'
+[0.555s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9/share/lab1_grupo9/package.dsv'
+[0.555s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9/share/lab1_grupo9/package.sh'
+[0.556s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9/share/lab1_grupo9/package.bash'
+[0.556s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9/share/lab1_grupo9/package.zsh'
+[0.556s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/benjaminuc/Desktop/grupo9_ws/install/lab1_grupo9/share/colcon-core/packages/lab1_grupo9)
+[0.741s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/benjaminuc/Desktop/grupo9_ws/build/lab2_grupo9' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/benjaminuc/Desktop/grupo9_ws/src/lab2_grupo9 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9
+[0.742s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/benjaminuc/Desktop/grupo9_ws/build/lab2_grupo9': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/benjaminuc/Desktop/grupo9_ws/build/lab2_grupo9 -- -j12 -l12
+[0.770s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/benjaminuc/Desktop/grupo9_ws/build/lab2_grupo9' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/benjaminuc/Desktop/grupo9_ws/build/lab2_grupo9 -- -j12 -l12
+[0.771s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/benjaminuc/Desktop/grupo9_ws/build/lab2_grupo9': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/benjaminuc/Desktop/grupo9_ws/build/lab2_grupo9
+[0.924s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lab2_grupo9)
+[0.924s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9' for CMake module files
+[0.925s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/benjaminuc/Desktop/grupo9_ws/build/lab2_grupo9' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/benjaminuc/Desktop/grupo9_ws/build/lab2_grupo9
+[0.925s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9' for CMake config files
+[0.926s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab2_grupo9', 'cmake_prefix_path')
+[0.926s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/hook/cmake_prefix_path.ps1'
+[0.927s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/hook/cmake_prefix_path.dsv'
+[0.927s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/hook/cmake_prefix_path.sh'
+[0.928s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/lib'
+[0.928s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/bin'
+[0.928s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/lib/pkgconfig/lab2_grupo9.pc'
+[0.928s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/lib/python3.10/site-packages'
+[0.928s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/bin'
+[0.929s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/package.ps1'
+[0.929s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/package.dsv'
+[0.930s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/package.sh'
+[0.930s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/package.bash'
+[0.931s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/package.zsh'
+[0.931s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/colcon-core/packages/lab2_grupo9)
+[0.932s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lab2_grupo9)
+[0.932s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9' for CMake module files
+[0.932s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9' for CMake config files
+[0.933s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab2_grupo9', 'cmake_prefix_path')
+[0.933s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/hook/cmake_prefix_path.ps1'
+[0.933s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/hook/cmake_prefix_path.dsv'
+[0.934s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/hook/cmake_prefix_path.sh'
+[0.934s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/lib'
+[0.935s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/bin'
+[0.935s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/lib/pkgconfig/lab2_grupo9.pc'
+[0.935s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/lib/python3.10/site-packages'
+[0.935s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/bin'
+[0.935s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/package.ps1'
+[0.936s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/package.dsv'
+[0.937s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/package.sh'
+[0.937s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/package.bash'
+[0.937s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/package.zsh'
+[0.938s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/colcon-core/packages/lab2_grupo9)
+[7.356s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/benjaminuc/Desktop/grupo9_ws/build/cmd_vel_mux' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/benjaminuc/Desktop/grupo9_ws/build/cmd_vel_mux -- -j12 -l12
+[7.357s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/benjaminuc/Desktop/grupo9_ws/build/cmd_vel_mux': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/benjaminuc/Desktop/grupo9_ws/build/cmd_vel_mux
+[7.374s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cmd_vel_mux)
+[7.374s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/benjaminuc/Desktop/grupo9_ws/build/cmd_vel_mux' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/benjaminuc/Desktop/grupo9_ws/build/cmd_vel_mux
+[7.374s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux' for CMake module files
+[7.375s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux' for CMake config files
+[7.375s] Level 1:colcon.colcon_core.shell:create_environment_hook('cmd_vel_mux', 'cmake_prefix_path')
+[7.375s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/hook/cmake_prefix_path.ps1'
+[7.375s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/hook/cmake_prefix_path.dsv'
+[7.375s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/hook/cmake_prefix_path.sh'
+[7.376s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/lib'
+[7.376s] Level 1:colcon.colcon_core.shell:create_environment_hook('cmd_vel_mux', 'ld_library_path_lib')
+[7.376s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/hook/ld_library_path_lib.ps1'
+[7.376s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/hook/ld_library_path_lib.dsv'
+[7.376s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/hook/ld_library_path_lib.sh'
+[7.377s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/bin'
+[7.377s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/lib/pkgconfig/cmd_vel_mux.pc'
+[7.377s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/lib/python3.10/site-packages'
+[7.377s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/bin'
+[7.377s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/package.ps1'
+[7.377s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/package.dsv'
+[7.378s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/package.sh'
+[7.378s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/package.bash'
+[7.378s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/package.zsh'
+[7.378s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/colcon-core/packages/cmd_vel_mux)
+[7.379s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cmd_vel_mux)
+[7.379s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux' for CMake module files
+[7.379s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux' for CMake config files
+[7.379s] Level 1:colcon.colcon_core.shell:create_environment_hook('cmd_vel_mux', 'cmake_prefix_path')
+[7.379s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/hook/cmake_prefix_path.ps1'
+[7.380s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/hook/cmake_prefix_path.dsv'
+[7.380s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/hook/cmake_prefix_path.sh'
+[7.380s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/lib'
+[7.380s] Level 1:colcon.colcon_core.shell:create_environment_hook('cmd_vel_mux', 'ld_library_path_lib')
+[7.380s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/hook/ld_library_path_lib.ps1'
+[7.381s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/hook/ld_library_path_lib.dsv'
+[7.381s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/hook/ld_library_path_lib.sh'
+[7.381s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/bin'
+[7.381s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/lib/pkgconfig/cmd_vel_mux.pc'
+[7.381s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/lib/python3.10/site-packages'
+[7.381s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/bin'
+[7.381s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/package.ps1'
+[7.382s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/package.dsv'
+[7.382s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/package.sh'
+[7.382s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/package.bash'
+[7.383s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/package.zsh'
+[7.383s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/colcon-core/packages/cmd_vel_mux)
+[10.043s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator -- -j12 -l12
+[10.044s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator
+[10.084s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(very_simple_robot_simulator)
+[10.084s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/benjaminuc/Desktop/grupo9_ws/build/very_simple_robot_simulator
+[10.084s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator' for CMake module files
+[10.085s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator' for CMake config files
+[10.085s] Level 1:colcon.colcon_core.shell:create_environment_hook('very_simple_robot_simulator', 'cmake_prefix_path')
+[10.085s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/hook/cmake_prefix_path.ps1'
+[10.085s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/hook/cmake_prefix_path.dsv'
+[10.086s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/hook/cmake_prefix_path.sh'
+[10.086s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/lib'
+[10.086s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/bin'
+[10.086s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/lib/pkgconfig/very_simple_robot_simulator.pc'
+[10.086s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/lib/python3.10/site-packages'
+[10.086s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/bin'
+[10.086s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/package.ps1'
+[10.087s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/package.dsv'
+[10.087s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/package.sh'
+[10.087s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/package.bash'
+[10.087s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/package.zsh'
+[10.087s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/colcon-core/packages/very_simple_robot_simulator)
+[10.088s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(very_simple_robot_simulator)
+[10.088s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator' for CMake module files
+[10.088s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator' for CMake config files
+[10.088s] Level 1:colcon.colcon_core.shell:create_environment_hook('very_simple_robot_simulator', 'cmake_prefix_path')
+[10.089s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/hook/cmake_prefix_path.ps1'
+[10.089s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/hook/cmake_prefix_path.dsv'
+[10.089s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/hook/cmake_prefix_path.sh'
+[10.089s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/lib'
+[10.089s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/bin'
+[10.089s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/lib/pkgconfig/very_simple_robot_simulator.pc'
+[10.089s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/lib/python3.10/site-packages'
+[10.090s] Level 1:colcon.colcon_core.environment:checking '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/bin'
+[10.090s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/package.ps1'
+[10.090s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/package.dsv'
+[10.090s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/package.sh'
+[10.091s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/package.bash'
+[10.091s] INFO:colcon.colcon_core.shell:Creating package script '/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/very_simple_robot_simulator/package.zsh'
+[10.091s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/benjaminuc/Desktop/grupo9_ws/install/very_simple_robot_simulator/share/colcon-core/packages/very_simple_robot_simulator)
+[10.091s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[10.091s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[10.091s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[10.091s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[10.095s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[10.095s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[10.095s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[10.106s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[10.107s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/benjaminuc/Desktop/grupo9_ws/install/local_setup.ps1'
+[10.107s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/benjaminuc/Desktop/grupo9_ws/install/_local_setup_util_ps1.py'
+[10.108s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/benjaminuc/Desktop/grupo9_ws/install/setup.ps1'
+[10.109s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/benjaminuc/Desktop/grupo9_ws/install/local_setup.sh'
+[10.109s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/benjaminuc/Desktop/grupo9_ws/install/_local_setup_util_sh.py'
+[10.110s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/benjaminuc/Desktop/grupo9_ws/install/setup.sh'
+[10.110s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/benjaminuc/Desktop/grupo9_ws/install/local_setup.bash'
+[10.111s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/benjaminuc/Desktop/grupo9_ws/install/setup.bash'
+[10.111s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/benjaminuc/Desktop/grupo9_ws/install/local_setup.zsh'
+[10.112s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/benjaminuc/Desktop/grupo9_ws/install/setup.zsh'

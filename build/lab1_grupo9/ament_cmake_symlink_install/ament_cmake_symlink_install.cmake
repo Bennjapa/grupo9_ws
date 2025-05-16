@@ -310,11 +310,14 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install(PROGRAMS "nodes/dead_reckoning_nav.py" "nodes/pose_loader.py" "nodes/kinect_node.py" "nodes/dead_reckoning_nav_mod.py" "DESTINATION" "lib/lab1_grupo9")
-ament_cmake_symlink_install_programs("/home/benjaminuc/Desktop/grupo9_ws/src/lab1_grupo9" PROGRAMS "nodes/dead_reckoning_nav.py" "nodes/pose_loader.py" "nodes/kinect_node.py" "nodes/dead_reckoning_nav_mod.py" "DESTINATION" "lib/lab1_grupo9")
+# install(PROGRAMS "nodes/dead_reckoning_nav.py" "nodes/pose_loader.py" "nodes/kinect_node.py" "nodes/teleoperacion.py" "DESTINATION" "lib/lab1_grupo9")
+ament_cmake_symlink_install_programs("/home/benjaminuc/Desktop/grupo9_ws/src/lab1_grupo9" PROGRAMS "nodes/dead_reckoning_nav.py" "nodes/pose_loader.py" "nodes/kinect_node.py" "nodes/teleoperacion.py" "DESTINATION" "lib/lab1_grupo9")
 
 # install(DIRECTORY "launch" "DESTINATION" "share/lab1_grupo9/")
 ament_cmake_symlink_install_directory("/home/benjaminuc/Desktop/grupo9_ws/src/lab1_grupo9" DIRECTORY "launch" "DESTINATION" "share/lab1_grupo9/")
+
+# install(FILES "posiciones.txt" "DESTINATION" "share/lab1_grupo9")
+ament_cmake_symlink_install_files("/home/benjaminuc/Desktop/grupo9_ws/src/lab1_grupo9" FILES "posiciones.txt" "DESTINATION" "share/lab1_grupo9")
 
 # install(FILES "/home/benjaminuc/Desktop/grupo9_ws/build/lab1_grupo9/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/lab1_grupo9" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/benjaminuc/Desktop/grupo9_ws/src/lab1_grupo9" FILES "/home/benjaminuc/Desktop/grupo9_ws/build/lab1_grupo9/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/lab1_grupo9" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

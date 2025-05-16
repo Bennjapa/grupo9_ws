@@ -1,0 +1,34 @@
+[0.014s] Invoking command in '/home/benjaminuc/Desktop/grupo9_ws/build/cmd_vel_mux': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/benjaminuc/Desktop/grupo9_ws/build/cmd_vel_mux -- -j12 -l12
+[0.077s] [ 25%] [32mBuilding CXX object CMakeFiles/cmd_vel_mux.dir/src/cmd_vel_mux.cpp.o[0m
+[0.077s] [ 50%] [32mBuilding CXX object CMakeFiles/cmd_vel_mux_node.dir/rclcpp_components/node_main_cmd_vel_mux_node.cpp.o[0m
+[2.546s] [ 75%] [32m[1mLinking CXX executable cmd_vel_mux_node[0m
+[2.651s] [ 75%] Built target cmd_vel_mux_node
+[6.818s] [100%] [32m[1mLinking CXX shared library libcmd_vel_mux.so[0m
+[7.103s] [100%] Built target cmd_vel_mux
+[7.110s] Invoked command in '/home/benjaminuc/Desktop/grupo9_ws/build/cmd_vel_mux' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/benjaminuc/Desktop/grupo9_ws/build/cmd_vel_mux -- -j12 -l12
+[7.111s] Invoking command in '/home/benjaminuc/Desktop/grupo9_ws/build/cmd_vel_mux': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/benjaminuc/Desktop/grupo9_ws/build/cmd_vel_mux
+[7.116s] -- Install configuration: ""
+[7.116s] -- Execute custom install script
+[7.117s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/lib/cmd_vel_mux/cmd_vel_mux_node
+[7.117s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/lib/libcmd_vel_mux.so
+[7.118s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/include/cmd_vel_mux/cmd_vel_mux.hpp
+[7.118s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/config/cmd_vel_mux_params.yaml
+[7.118s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/launch/cmd_vel_mux-composed-launch.py
+[7.118s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/launch/cmd_vel_mux-launch.py
+[7.119s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/ament_index/resource_index/package_run_dependencies/cmd_vel_mux
+[7.119s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/ament_index/resource_index/parent_prefix_path/cmd_vel_mux
+[7.119s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/environment/ament_prefix_path.sh
+[7.119s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/environment/ament_prefix_path.dsv
+[7.119s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/environment/path.sh
+[7.119s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/environment/path.dsv
+[7.119s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/local_setup.bash
+[7.120s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/local_setup.sh
+[7.120s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/local_setup.zsh
+[7.120s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/local_setup.dsv
+[7.120s] -- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/package.dsv
+[7.125s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/ament_index/resource_index/packages/cmd_vel_mux
+[7.126s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/ament_index/resource_index/rclcpp_components/cmd_vel_mux
+[7.126s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/cmake/cmd_vel_muxConfig.cmake
+[7.126s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/cmake/cmd_vel_muxConfig-version.cmake
+[7.126s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/cmd_vel_mux/share/cmd_vel_mux/package.xml
+[7.128s] Invoked command in '/home/benjaminuc/Desktop/grupo9_ws/build/cmd_vel_mux' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/benjaminuc/Desktop/grupo9_ws/build/cmd_vel_mux
