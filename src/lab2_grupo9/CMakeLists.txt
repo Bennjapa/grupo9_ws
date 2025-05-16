@@ -19,6 +19,9 @@ install(PROGRAMS
 	nodes/p_controller_w.py
  	nodes/pi_controller.py
   	nodes/pi_controller_w.py
+   	nodes/wall_dodger_p_controller.py
+    	nodes/wall_distance.py
+     	nodes/p_navigation_node.py
 	DESTINATION lib/${PROJECT_NAME})
 
 #install launch files
