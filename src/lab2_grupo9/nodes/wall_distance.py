@@ -39,7 +39,8 @@ class wall_distance(Node):
         zona_derecha = self.current_cv_depth_image[:, 2*tercio:]
 
         def minimo(zona):
-            return np.min(zona)
+            dist = np.nanmin(zona)
+            return dist if not np.isnan(dist) else 0.0
         
         izquierda = minimo(zona_izquierda)
         centro = minimo(zona_central)
