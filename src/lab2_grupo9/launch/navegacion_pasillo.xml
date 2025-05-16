@@ -6,8 +6,8 @@
   <include file="$(find-pkg-share very_simple_robot_simulator)/launch/world_state.xml" />
   <include file="$(find-pkg-share very_simple_robot_simulator)/launch/openni_simulator.xml" />
 
-<node pkg="my_pkg" exec="p_navigation_node.py" name="navigation_node" />
-<node pkg="my_pkg" exec="wall_dodger_p_controller.py" name="p_controller" />
-<node pkg="my_pkg" exec="wall_distance.py" name="wall_distance" />
+<node pkg="lab2_grupo9" exec="p_navigation_node.py" name="navigation_node" />
+<node pkg="lab2_grupo9" exec="wall_dodger_p_controller.py" name="wp_controller" />
+<node pkg="lab2_grupo9" exec="wall_distance.py" name="wall_distance" />
 
 </launch>
