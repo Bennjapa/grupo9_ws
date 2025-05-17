@@ -10,6 +10,7 @@ from threading import Thread, Event
 from nav_msgs.msg import Odometry
 from std_msgs.msg import Float64
 from std_msgs.msg import Empty
+from std_msgs.msg import String
 
 class dead_reckoning_nav(Node):
     def __init__(self):
@@ -53,12 +54,14 @@ class dead_reckoning_nav(Node):
         self.state_w_pub = self.create_publisher(Float64, "state_w", 1)
         self.setpoint_w_pub = self.create_publisher(Float64, "setpoint_w", 1)
         self.control_effort_w_sub = self.create_subscription(Float64, "control_effort_w", self.asignar_velocidad_angular, 1)
+        self.controlling_pub = self.create_publisher(String, "controlling", 1)
+        self.controlling_w_pub = self.create_publisher(String, "controlling_w", 1)
 
         self.odom_sub = self.create_subscription(Odometry, "/odom", self.leer_odometria, 10)
 
         #Creamos un publisher de setpoint, publisher del estado
-        """""
-        self.pose_sub = self.create_subscription(Pose, "/real_pose", self.registro_realpose, 10)
+        
+        """self.pose_sub = self.create_subscription(Pose, "/real_pose", self.registro_realpose, 10)
         self.odom_reg_sub = self.create_subscription(Odometry, "/odom", self.registro_odometry, 10)"""
 
 
@@ -67,10 +70,12 @@ class dead_reckoning_nav(Node):
         self.speed.linear.x = 0.0
         self.speed.angular.z = 0.0
 
+        self.nombre_archivo_odometria = "Desktop/odom_poses_p_controller.txt"
+        self.nombre_archivo_poses = "Desktop/real_poses_p_controller.txt"
         """
-        with open(f"odom_poses.txt", "w") as file:
+        with open(f"{self.nombre_archivo_odometria}", "w") as file:
             file.write("")
-        with open(f"real_poses.txt", "w") as file:
+        with open(f"{self.nombre_archivo_poses}", "w") as file:
             file.write("")"""
 
         #Creamos un timer que estara enviando velocidades cada 0.1 segundos
@@ -126,12 +131,12 @@ class dead_reckoning_nav(Node):
 
     def asignar_velocidad_lineal(self, data:Float64):
         if not self.hay_obstaculo:
-            #self.get_logger().info(f"Asignando velocidad: v={data.data}")
+            self.get_logger().info(f"Asignando velocidad: v={data.data}")
             self.speed.linear.x = data.data
 
     def asignar_velocidad_angular(self, data:Float64):
         if not self.hay_obstaculo:
-            #self.get_logger().info(f"Asignando velocidad: w={data.data}")
+            self.get_logger().info(f"Asignando velocidad: w={data.data}")
             self.speed.angular.z = data.data
 
     def accion_obstaculo_cb(self, vector: Vector3):
@@ -167,11 +172,14 @@ class dead_reckoning_nav(Node):
         setpoint = Float64()
         setpoint.data = x_ref
         self.setpoint_pub.publish( setpoint )
-        while round(self.x_state, 4) != round(x_ref, 4):
+        while round(self.x_state, 3) != round(x_ref, 3):
             msg = Float64()
             msg.data = self.x_state
             self.state_pub.publish( msg )
-            self.get_logger().info(f"{self.x_state} != {x_ref}")
+            #self.get_logger().info(f"{self.x_state} != {x_ref}")
+        control = String()
+        control.data = "stop"
+        self.controlling_pub.publish( control )
 
     def controlar_y(self, pose:tuple):
         y_ref = pose[0] + self.y_state
@@ -179,11 +187,14 @@ class dead_reckoning_nav(Node):
         setpoint = Float64()
         setpoint.data = y_ref
         self.setpoint_pub.publish( setpoint )
-        while round(self.y_state, 4) != round(y_ref, 4):
+        while round(self.y_state, 3) != round(y_ref, 3):
             msg = Float64()
             msg.data = self.y_state
             self.state_pub.publish( msg )
-            self.get_logger().info(f"{self.y_state} != {y_ref}")
+            #self.get_logger().info(f"{self.y_state} != {y_ref}")
+        control = String()
+        control.data = "stop"
+        self.controlling_pub.publish( control )
 
     def controlar_w(self, pose:tuple):
         w_ref = pose[1] + self.a_state
@@ -194,42 +205,22 @@ class dead_reckoning_nav(Node):
         #Para esta transformamos el angulo porque la odometria mide de [-180, 180], necesitamos hacer la conversión para que el cambio de angulo sea sutil
         #Es decir que nuestro controlador entienda que 180 y -180 son valores cercanos y no lejanos.
         #Esta trasformacion tambien se hace dentro del controlador pid de la velocidad angular para evitar problemas de igual forma
-        while round((self.a_state % (2*np.pi)), 4) != round((w_ref % (2*np.pi)), 4):
+        while round((self.a_state % (2*np.pi)), 3) != round((w_ref % (2*np.pi)), 3):
             msg = Float64()
             msg.data = self.a_state
             self.state_w_pub.publish( msg ) 
-            self.get_logger().info(f"{self.a_state} != {w_ref}")
-        
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            #self.get_logger().info(f"{self.a_state % (2*np.pi)} != {w_ref % (2*np.pi)}")  
+        control = String()
+        control.data = "stop"  
+        self.controlling_w_pub.publish( control )
     """
+    
     def registro_realpose(self, real_pose : Pose):
-        with open(f"real_poses.txt", "a") as file:
+        with open(f"{self.nombre_archivo_poses}", "a") as file:
             file.write(f"{real_pose.position.x},{real_pose.position.y}\n")
 
     def registro_odometry(self, odom : Odometry):
-        with open(f"odom_poses.txt", "a") as file:
+        with open(f"{self.nombre_archivo_odometria}", "a") as file:
             file.write(f"{odom.pose.pose.position.x},{odom.pose.pose.position.y}\n")"""
 
 

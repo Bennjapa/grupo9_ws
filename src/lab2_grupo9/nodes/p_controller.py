@@ -4,6 +4,7 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float64
 from std_msgs.msg import Empty
+from std_msgs.msg import String
 
 class PController(Node):
     
@@ -16,6 +17,7 @@ class PController(Node):
         self.control_effort_pub = self.create_publisher( Float64, "control_effort", 1) 
         self.setpoint_sub = self.create_subscription( Float64, "setpoint", self.definir_setpoint, 1)
         self.state_sub = self.create_subscription( Float64, "state", self.recibir_estado, 1)
+        self.controlling_sub = self.create_subscription( String, "controlling", self.controlando, 1)
 
 
     def definir_setpoint(self, msg:Float64):
@@ -39,10 +41,25 @@ class PController(Node):
         #actuacion
         actuation = p_actuation 
 
+        if actuation > 0.2:
+            actuation = 0.2
+        elif actuation < -0.2:
+            actuation = -0.2
+        else:
+            actuation = actuation
+
         #Enviar mensaje
         msg = Float64()
         msg.data = actuation
         self.control_effort_pub.publish( msg )
+
+    def controlando(self, msg:String):
+        estado = msg.data
+        if estado == "stop":
+            self.reset()
+            msg = Float64()
+            msg.data = 0.0
+            self.control_effort_pub.publish( msg )
 
     def reset(self):
         self.setpoint = None
@@ -50,7 +67,7 @@ class PController(Node):
 
 def main():
     rclpy.init()
-    p_ctrl = PController(0.2)
+    p_ctrl = PController(0.8)
     rclpy.spin(p_ctrl)
 
 if __name__ == "__main__":

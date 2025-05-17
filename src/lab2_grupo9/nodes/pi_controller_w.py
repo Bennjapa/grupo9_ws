@@ -4,6 +4,7 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float64
 from std_msgs.msg import Empty
+from std_msgs.msg import String
 import numpy as np
 
 class PIController(Node):
@@ -15,11 +16,11 @@ class PIController(Node):
         self.setpoint = None
         self.state = None
         self.error_integral = 0
-        self.error_anterior = 0
 
         self.control_effort_pub = self.create_publisher( Float64, "control_effort_w", 1) 
         self.setpoint_sub = self.create_subscription( Float64, "setpoint_w", self.definir_setpoint, 1)
         self.state_sub = self.create_subscription( Float64, "state_w", self.recibir_estado, 1)
+        self.controlling_sub = self.create_subscription( String, "controlling_w", self.controlando, 1)
 
     def definir_setpoint(self, msg:Float64):
         self.get_logger().info(f"[PICTRL] nuevo setpoint recibido: {msg.data}")
@@ -28,19 +29,22 @@ class PIController(Node):
         self.reset()
         self.setpoint = msg.data
         self.error_integral = 0
-        self.error_anterior = 0
     
-    def recibir_estado(self, msg:Float64):
+    def recibir_estado(self, data:Float64):
         tiempo_actual = (self.get_clock().now().nanoseconds) * 1e-9
 
         if self.setpoint == None:
             return
-        self.state = msg.data
+        self.state = data.data
         
         dt = tiempo_actual - self.tiempo_anterior
         
         #Definimos nuestro error como deseado - actual
-        error = (self.setpoint % (2*np.pi)) - (self.state % (2*np.pi))
+        error = self.setpoint - self.state
+        if error >= 0:
+            error = error % 2*np.pi
+        else:
+            error = -(error % 2*np.pi)
         self.error_integral += error*dt
         self.tiempo_anterior = tiempo_actual
 
@@ -57,6 +61,14 @@ class PIController(Node):
         msg = Float64()
         msg.data = actuation
         self.control_effort_pub.publish( msg )
+    
+    def controlando(self, msg:String):
+        estado = msg.data
+        if estado == "stop":
+            self.reset()
+            msg = Float64()
+            msg.data = 0.0
+            self.control_effort_pub.publish( msg )
 
     def reset(self):
         self.setpoint = None
@@ -64,7 +76,7 @@ class PIController(Node):
 
 def main():
     rclpy.init()
-    pi_ctrl = PIController(0.5, 0.1)
+    pi_ctrl = PIController(0.1, 0.05)
     rclpy.spin(pi_ctrl)
 
 if __name__ == "__main__":

@@ -4,6 +4,7 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float64
 from std_msgs.msg import Empty
+from std_msgs.msg import String
 
 class PIController(Node):
     
@@ -14,11 +15,11 @@ class PIController(Node):
         self.setpoint = None
         self.state = None
         self.error_integral = 0
-        self.error_anterior = 0
 
         self.control_effort_pub = self.create_publisher( Float64, "control_effort", 1) 
         self.setpoint_sub = self.create_subscription( Float64, "setpoint", self.definir_setpoint, 1)
         self.state_sub = self.create_subscription( Float64, "state", self.recibir_estado, 1)
+        self.controlling_sub = self.create_subscription( String, "controlling", self.controlando, 1)
 
     def definir_setpoint(self, msg:Float64):
         self.get_logger().info(f"[PICTRL] nuevo setpoint recibido: {msg.data}")
@@ -26,6 +27,7 @@ class PIController(Node):
         self.tiempo_anterior = (self.get_clock().now().nanoseconds) * 1e-9
         self.reset()
         self.setpoint = msg.data
+        self.error_integral = 0
     
     def recibir_estado(self, msg:Float64):
         tiempo_actual = (self.get_clock().now().nanoseconds) * 1e-9
@@ -50,10 +52,25 @@ class PIController(Node):
         #actuacion
         actuation = p_actuation + i_actuation 
 
+        if actuation > 0.2:
+            actuation = 0.2
+        elif actuation < -0.2:
+            actuation = -0.2
+        else:
+            actuation = actuation
+
         #Enviar mensaje
         msg = Float64()
         msg.data = actuation
         self.control_effort_pub.publish( msg )
+    
+    def controlando(self, msg:String):
+        estado = msg.data
+        if estado == "stop":
+            self.reset()
+            msg = Float64()
+            msg.data = 0.0
+            self.control_effort_pub.publish( msg )
 
     def reset(self):
         self.setpoint = None
@@ -61,7 +78,7 @@ class PIController(Node):
 
 def main():
     rclpy.init()
-    pi_ctrl = PIController(0.5, 0.1)
+    pi_ctrl = PIController(0.1, 0.05)
     rclpy.spin(pi_ctrl)
 
 if __name__ == "__main__":
