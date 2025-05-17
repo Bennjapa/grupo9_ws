@@ -1,0 +1,13 @@
+<launch>
+
+  <include file="$(find-pkg-share very_simple_robot_simulator)/launch/minimal_simulator_py.xml" />
+  <!--<include file="$(find-pkg-share very_simple_robot_simulator)/launch/openni_simulator.xml" />-->
+  <include file="$(find-pkg-share very_simple_robot_simulator)/launch/lidar_simulator.xml" />
+  <include file="$(find-pkg-share very_simple_robot_simulator)/launch/world_state.xml" />
+  <include file="$(find-pkg-share very_simple_robot_simulator)/launch/openni_simulator.xml" />
+
+<node pkg="lab2_grupo9" exec="p_navigation_node.py" name="navigation_node" />
+<node pkg="lab2_grupo9" exec="wall_dodger_p_controller.py" name="wp_controller" />
+<node pkg="lab2_grupo9" exec="wall_distance.py" name="wall_distance" />
+
+</launch>
