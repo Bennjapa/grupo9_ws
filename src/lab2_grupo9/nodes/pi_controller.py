@@ -78,7 +78,7 @@ class PIController(Node):
 
 def main():
     rclpy.init()
-    pi_ctrl = PIController(0.1, 0.05)
+    pi_ctrl = PIController(0.6, 0.1)
     rclpy.spin(pi_ctrl)
 
 if __name__ == "__main__":

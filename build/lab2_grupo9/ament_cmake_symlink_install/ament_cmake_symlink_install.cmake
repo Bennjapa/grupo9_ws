@@ -310,8 +310,8 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install(PROGRAMS "nodes/dead_reckoning_nav.py" "nodes/pose_loader.py" "nodes/p_controller.py" "nodes/p_controller_w.py" "nodes/pi_controller.py" "nodes/pi_controller_w.py" "DESTINATION" "lib/lab2_grupo9")
-ament_cmake_symlink_install_programs("/home/benjaminuc/Desktop/grupo9_ws/src/lab2_grupo9" PROGRAMS "nodes/dead_reckoning_nav.py" "nodes/pose_loader.py" "nodes/p_controller.py" "nodes/p_controller_w.py" "nodes/pi_controller.py" "nodes/pi_controller_w.py" "DESTINATION" "lib/lab2_grupo9")
+# install(PROGRAMS "nodes/dead_reckoning_nav.py" "nodes/pose_loader.py" "nodes/p_controller.py" "nodes/p_controller_w.py" "nodes/pi_controller.py" "nodes/pi_controller_w.py" "nodes/wall_dodger_p_controller.py" "nodes/wall_distance.py" "nodes/p_navigation_node.py" "DESTINATION" "lib/lab2_grupo9")
+ament_cmake_symlink_install_programs("/home/benjaminuc/Desktop/grupo9_ws/src/lab2_grupo9" PROGRAMS "nodes/dead_reckoning_nav.py" "nodes/pose_loader.py" "nodes/p_controller.py" "nodes/p_controller_w.py" "nodes/pi_controller.py" "nodes/pi_controller_w.py" "nodes/wall_dodger_p_controller.py" "nodes/wall_distance.py" "nodes/p_navigation_node.py" "DESTINATION" "lib/lab2_grupo9")
 
 # install(DIRECTORY "launch" "DESTINATION" "share/lab2_grupo9/")
 ament_cmake_symlink_install_directory("/home/benjaminuc/Desktop/grupo9_ws/src/lab2_grupo9" DIRECTORY "launch" "DESTINATION" "share/lab2_grupo9/")

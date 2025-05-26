@@ -6,6 +6,7 @@ from std_msgs.msg import Float64
 from std_msgs.msg import Empty
 from std_msgs.msg import String
 import numpy as np
+from math import atan2, sin, cos
 
 class PController(Node):
     
@@ -34,8 +35,9 @@ class PController(Node):
         
         #Definimos nuestro error como deseado - actual
         #Phase unwrapping
-        #
-        error = (self.setpoint - self.state) % (2*np.pi)
+        
+        error = self.setpoint - self.state
+        error = atan2(sin(error),cos(error))
 
         #Proporcional
         p_actuation = self.kp*error

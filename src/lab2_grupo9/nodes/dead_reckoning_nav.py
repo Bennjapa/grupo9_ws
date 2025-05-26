@@ -11,6 +11,7 @@ from nav_msgs.msg import Odometry
 from std_msgs.msg import Float64
 from std_msgs.msg import Empty
 from std_msgs.msg import String
+from math import atan2, sin, cos
 
 class dead_reckoning_nav(Node):
     def __init__(self):
@@ -24,7 +25,9 @@ class dead_reckoning_nav(Node):
         self.y_state = 0.0
         #Estado de el Angulo
         self.a_state = 0.0
-        
+
+        self.tiempo_inicio = self.get_clock().now().nanoseconds * 1e-9
+
         #Creamos nuestro publisher de velocidad
         self.enviar_velocidad = self.create_publisher(
             Twist,
@@ -61,8 +64,9 @@ class dead_reckoning_nav(Node):
 
         #Creamos un publisher de setpoint, publisher del estado
         
-        """self.pose_sub = self.create_subscription(Pose, "/real_pose", self.registro_realpose, 10)
-        self.odom_reg_sub = self.create_subscription(Odometry, "/odom", self.registro_odometry, 10)"""
+        #CARGA DE ARCHIVOS
+        self.pose_sub = self.create_subscription(Pose, "/real_pose", self.registro_realpose, 10)
+        self.odom_reg_sub = self.create_subscription(Odometry, "/odom", self.registro_odometry, 10)
 
 
         #Creamos nuestro mensaje de velocidad
@@ -70,14 +74,24 @@ class dead_reckoning_nav(Node):
         self.speed.linear.x = 0.0
         self.speed.angular.z = 0.0
 
-        self.nombre_archivo_odometria = "Desktop/odom_poses_p_controller.txt"
-        self.nombre_archivo_poses = "Desktop/real_poses_p_controller.txt"
+
+        #CARGA DE ARCHIVOS
         """
+        c = "pi"
+        self.nombre_archivo_odometria = f"Desktop/odom_poses_{c}_controller.txt"
+        self.nombre_archivo_poses = f"Desktop/real_poses_{c}_controller.txt"
+        self.nombre_archivo_lineal = f"Desktop/lineal_{c}_controller.txt"
+        self.nombre_archivo_angular = f"Desktop/angular_{c}_controller.txt"
+        
         with open(f"{self.nombre_archivo_odometria}", "w") as file:
             file.write("")
         with open(f"{self.nombre_archivo_poses}", "w") as file:
-            file.write("")"""
-
+            file.write("")
+        with open(f"{self.nombre_archivo_lineal}", "w") as file:
+            file.write("")
+        with open(f"{self.nombre_archivo_angular}", "w") as file:
+            file.write("")
+        """
         #Creamos un timer que estara enviando velocidades cada 0.1 segundos
         self.timer_mover = self.create_timer(0.1, self.move)
 
@@ -158,6 +172,7 @@ class dead_reckoning_nav(Node):
             self.x_state = odom.pose.pose.position.x
         else:
             self.x_state = -odom.pose.pose.position.x
+        #Este se usa para graficar la posicion real
 
         if self.a_state >= 0:
             self.y_state = odom.pose.pose.position.y
@@ -173,6 +188,7 @@ class dead_reckoning_nav(Node):
         setpoint.data = x_ref
         self.setpoint_pub.publish( setpoint )
         while round(self.x_state, 3) != round(x_ref, 3):
+            #self.registro_lineal(x_ref, self.speed.linear.x, self.x_state)
             msg = Float64()
             msg.data = self.x_state
             self.state_pub.publish( msg )
@@ -188,6 +204,7 @@ class dead_reckoning_nav(Node):
         setpoint.data = y_ref
         self.setpoint_pub.publish( setpoint )
         while round(self.y_state, 3) != round(y_ref, 3):
+            #self.registro_lineal(y_ref, self.speed.linear.x, self.y_state)
             msg = Float64()
             msg.data = self.y_state
             self.state_pub.publish( msg )
@@ -205,23 +222,39 @@ class dead_reckoning_nav(Node):
         #Para esta transformamos el angulo porque la odometria mide de [-180, 180], necesitamos hacer la conversión para que el cambio de angulo sea sutil
         #Es decir que nuestro controlador entienda que 180 y -180 son valores cercanos y no lejanos.
         #Esta trasformacion tambien se hace dentro del controlador pid de la velocidad angular para evitar problemas de igual forma
-        while round((self.a_state % (2*np.pi)), 3) != round((w_ref % (2*np.pi)), 3):
+        while round(atan2(sin(self.a_state),cos(self.a_state)), 3) != round(atan2(sin(w_ref),cos(w_ref)), 3):
+            #self.registro_angular(atan2(sin(w_ref),cos(w_ref)),self.speed.angular.z,atan2(sin(self.a_state),cos(self.a_state)))
             msg = Float64()
             msg.data = self.a_state
             self.state_w_pub.publish( msg ) 
-            #self.get_logger().info(f"{self.a_state % (2*np.pi)} != {w_ref % (2*np.pi)}")  
+            #self.get_logger().info(f"{atan2(sin(self.a_state),cos(self.a_state))} != {atan2(sin(w_ref),cos(w_ref))}")  
         control = String()
         control.data = "stop"  
         self.controlling_w_pub.publish( control )
+
+
     """
-    
+    #CARGA DE ARCHIVO
     def registro_realpose(self, real_pose : Pose):
         with open(f"{self.nombre_archivo_poses}", "a") as file:
             file.write(f"{real_pose.position.x},{real_pose.position.y}\n")
 
     def registro_odometry(self, odom : Odometry):
         with open(f"{self.nombre_archivo_odometria}", "a") as file:
-            file.write(f"{odom.pose.pose.position.x},{odom.pose.pose.position.y}\n")"""
+            file.write(f"{odom.pose.pose.position.x},{odom.pose.pose.position.y}\n")
+    
+    def registro_lineal(self, ref, actuacion, real):
+        tiempo_actual = self.get_clock().now().nanoseconds * 1e-9
+        t = tiempo_actual - self.tiempo_inicio
+        with open(f"{self.nombre_archivo_lineal}", "a") as file:
+            file.write(f"{ref},{actuacion},{real},{t}\n")
+    
+    def registro_angular(self, ref, actuacion, real):
+        tiempo_actual = self.get_clock().now().nanoseconds * 1e-9
+        t = tiempo_actual - self.tiempo_inicio
+        with open(f"{self.nombre_archivo_angular}", "a") as file:
+            file.write(f"{ref},{actuacion},{real},{t}\n")"""
+
 
 
 if __name__ == "__main__":

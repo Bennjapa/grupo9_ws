@@ -6,6 +6,7 @@ from std_msgs.msg import Float64
 from std_msgs.msg import Empty
 from std_msgs.msg import String
 import numpy as np
+from math import atan2, sin, cos
 
 class PIController(Node):
     
@@ -41,10 +42,8 @@ class PIController(Node):
         
         #Definimos nuestro error como deseado - actual
         error = self.setpoint - self.state
-        if error >= 0:
-            error = error % 2*np.pi
-        else:
-            error = -(error % 2*np.pi)
+        error = atan2(sin(error),cos(error))
+
         self.error_integral += error*dt
         self.tiempo_anterior = tiempo_actual
 
@@ -76,7 +75,7 @@ class PIController(Node):
 
 def main():
     rclpy.init()
-    pi_ctrl = PIController(0.1, 0.05)
+    pi_ctrl = PIController(0.6, 0.6)
     rclpy.spin(pi_ctrl)
 
 if __name__ == "__main__":

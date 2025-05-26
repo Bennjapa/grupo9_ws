@@ -4,7 +4,11 @@
 /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/lib/lab2_grupo9/p_controller_w.py
 /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/lib/lab2_grupo9/pi_controller.py
 /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/lib/lab2_grupo9/pi_controller_w.py
+/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/lib/lab2_grupo9/wall_dodger_p_controller.py
+/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/lib/lab2_grupo9/wall_distance.py
+/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/lib/lab2_grupo9/p_navigation_node.py
 /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9//launch/avanzar_y_rotar_ctrl.xml
+/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9//launch/navegacion_pasillo.xml
 /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9//launch/pi_avanzar_y_rotar_ctrl.xml
 /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/posiciones.txt
 /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/ament_index/resource_index/package_run_dependencies/lab2_grupo9
