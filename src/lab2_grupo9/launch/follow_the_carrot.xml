@@ -1,0 +1,8 @@
+<launch>
+    <include file ="$(find-pkg-share very_simple_robot_simulator)/launch/run_all.xml"/>
+    <node pkg="lab2_grupo9" exec= "follow_the_carrot.py" name = "follow_the_carrot"/>
+    <node pkg="lab2_grupo9" exec= "path_reader.py" name = "path_reader"/>
+    <node pkg="lab2_grupo9" exec= "follower_ctrl.py" name = "follower"/>
+    <node pkg="lab2_grupo9" exec= "follower_navigation.py" name = "follower_navegator"/>
+    <node pkg="lab2_grupo9" exec= "demostracion.py" name = "nodo_ventana"/>
+</launch>

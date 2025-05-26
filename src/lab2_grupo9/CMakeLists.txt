@@ -22,6 +22,11 @@ install(PROGRAMS
    	nodes/wall_dodger_p_controller.py
     	nodes/wall_distance.py
      	nodes/p_navigation_node.py
+	nodes/path_reader.py
+	nodes/follow_the_carrot.py
+	nodes/follower_ctrl.py
+	nodes/follower_navigation.py
+	nodes/demostracion.py
 	DESTINATION lib/${PROJECT_NAME})
 
 #install launch files
