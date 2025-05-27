@@ -65,9 +65,10 @@ class dead_reckoning_nav(Node):
         #Creamos un publisher de setpoint, publisher del estado
         
         #CARGA DE ARCHIVOS
+        """
         self.pose_sub = self.create_subscription(Pose, "/real_pose", self.registro_realpose, 10)
         self.odom_reg_sub = self.create_subscription(Odometry, "/odom", self.registro_odometry, 10)
-
+        """
 
         #Creamos nuestro mensaje de velocidad
         self.speed = Twist()
@@ -188,6 +189,7 @@ class dead_reckoning_nav(Node):
         setpoint.data = x_ref
         self.setpoint_pub.publish( setpoint )
         while round(self.x_state, 3) != round(x_ref, 3):
+            #REGISTRO
             #self.registro_lineal(x_ref, self.speed.linear.x, self.x_state)
             msg = Float64()
             msg.data = self.x_state
@@ -204,6 +206,7 @@ class dead_reckoning_nav(Node):
         setpoint.data = y_ref
         self.setpoint_pub.publish( setpoint )
         while round(self.y_state, 3) != round(y_ref, 3):
+            #REGISTRO
             #self.registro_lineal(y_ref, self.speed.linear.x, self.y_state)
             msg = Float64()
             msg.data = self.y_state
@@ -223,6 +226,7 @@ class dead_reckoning_nav(Node):
         #Es decir que nuestro controlador entienda que 180 y -180 son valores cercanos y no lejanos.
         #Esta trasformacion tambien se hace dentro del controlador pid de la velocidad angular para evitar problemas de igual forma
         while round(atan2(sin(self.a_state),cos(self.a_state)), 3) != round(atan2(sin(w_ref),cos(w_ref)), 3):
+            #REGISTRO
             #self.registro_angular(atan2(sin(w_ref),cos(w_ref)),self.speed.angular.z,atan2(sin(self.a_state),cos(self.a_state)))
             msg = Float64()
             msg.data = self.a_state
@@ -233,8 +237,9 @@ class dead_reckoning_nav(Node):
         self.controlling_w_pub.publish( control )
 
 
-    """
+    
     #CARGA DE ARCHIVO
+    """
     def registro_realpose(self, real_pose : Pose):
         with open(f"{self.nombre_archivo_poses}", "a") as file:
             file.write(f"{real_pose.position.x},{real_pose.position.y}\n")
@@ -253,7 +258,8 @@ class dead_reckoning_nav(Node):
         tiempo_actual = self.get_clock().now().nanoseconds * 1e-9
         t = tiempo_actual - self.tiempo_inicio
         with open(f"{self.nombre_archivo_angular}", "a") as file:
-            file.write(f"{ref},{actuacion},{real},{t}\n")"""
+            file.write(f"{ref},{actuacion},{real},{t}\n")
+    """
 
 
 
