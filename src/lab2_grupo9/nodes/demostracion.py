@@ -5,37 +5,53 @@ from rclpy.node import Node
 from geometry_msgs.msg import Pose
 from nav_msgs.msg import Path, Odometry
 
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as p
 from matplotlib.animation import FuncAnimation
 
 import threading
 
 class NodoVentana(Node):
     def __init__(self):
-        super().__init__("nodo_con_matplotlib")
+        super().__init__("nodo_demostracion")
 
-        # Datos del robot y path
-        self.pos_x = 0.0
-        self.pos_y = 0.0
+        # Variables para la lectura del path
         self.path = []
         self.path_leido = False
 
+        # Variables para comparar posicion real con la odometría
         self.historial_posiciones = []
         self.historial_odometria = []
 
-        # Subscripciones
-        self.create_subscription(Pose, "/real_pose", self.pose_cb, 10)
-        self.create_subscription(Path, "nav_plan", self.path_cb, 10)
-        self.create_subscription(Odometry, "/odom", self.leer_odometria, 10)
+        # Nos suscribimos a la pose real
+        self.leer_pose = self.create_subscription(
+            Pose,
+            "/real_pose",
+            self.pose_callback,
+            10
+        )
+        # Nos suscribimos al nav_plan
+        self.leer_path = self.create_subscription(
+            Path,
+            "nav_plan",
+            self.path_callback,
+            10
+        )
+        # Nos suscribimos a la odometría
+        self.leer_odo = self.create_subscription(
+            Odometry,
+            "/odom",
+            self.leer_odometria,
+            10
+        )
 
-    def pose_cb(self, pose: Pose):
-        self.pos_x = pose.position.x
-        self.pos_y = pose.position.y
-        self.historial_posiciones.append((self.pos_x, self.pos_y))
+    def pose_callback(self, pose: Pose):
+        x = pose.position.x
+        y = pose.position.y
+        self.historial_posiciones.append((x, y))
 
-    def path_cb(self, msg: Path):
+    def path_callback(self, path: Path):
         if not self.path_leido:
-            self.path = [(p.pose.position.x, p.pose.position.y) for p in msg.poses]
+            self.path = [(coordenadas.pose.position.x, coordenadas.pose.position.y) for coordenadas in path.poses]
             if len(self.path) > 20:
                 self.path_leido = True
                 self.get_logger().info(f"Path recibido con {len(self.path)} puntos.")
@@ -45,22 +61,47 @@ class NodoVentana(Node):
         y = msg.pose.pose.position.y
         self.historial_odometria.append((x, y))
 
+# ------------------------------- Hasta aquí el nodo --------------------------------
+
 
 def iniciar_vista(nodo):
-    fig, ax = plt.subplots()
-    ax.set_title("Nav.Plan, odometría y real pose")
-    ax.set_xlim(-1, 7)
-    ax.set_ylim(-1, 7)
-    ax.set_aspect('equal')
+    """
+    Método para graficar la info mediante matplotlib
+    """
+    figura, ejes = p.subplots()
 
-    path_plot, = ax.plot([], [], 'bo', markersize=2, label="Nav.Plan")
-    recorrido_plot, = ax.plot([], [], 'r-', linewidth=1, label="Recorrido real")
-    odom_plot, = ax.plot([], [], 'y--', linewidth=1, label="Odometría")
-    robot_plot, = ax.plot([], [], 'ro', label="Posición actual")
+    ejes.set_title("Nav.Plan, odometría y real pose")
+    ejes.set_xlim(-1, 7)
+    ejes.set_ylim(-1, 7)
+    ejes.set_aspect('equal')
 
-    ax.legend()
+    path_plot, = ejes.plot([], [],
+                           'bo', # b de blue 
+                           markersize = 2,
+                           label = "Nav.Plan"
+                        )
+    recorrido_plot, = ejes.plot([], [],
+                                'r-', # r de red y punteada
+                                linewidth = 1,
+                                label = "Recorrido real"
+                        )
+    odom_plot, = ejes.plot([], [],
+                           'y--', # y de yellow y linea doble punteada
+                           linewidth = 1,
+                           label = "Odometría"
+                        )
+    robot_plot, = ejes.plot([], [],
+                            'ro', # r de red y una "pelota"
+                            label = "Posición actual"
+                        )
 
-    def actualizar(frame):
+    ejes.legend() # Activamos la leyenda
+
+    def actualizar_plot(frame): # frame es un argumento que usa la función FuncAnimation
+        # y que le entrega al método en cada iteración
+        """
+        Método encargado de actualizar el gráfico según la info recibida
+        """
         # Actualizar recorrido real
         if nodo.historial_posiciones:
             x_hist, y_hist = zip(*nodo.historial_posiciones)
@@ -79,30 +120,32 @@ def iniciar_vista(nodo):
 
         return path_plot, recorrido_plot, odom_plot, robot_plot
 
-    ani = FuncAnimation(fig, actualizar, interval=100)
-    plt.show()
+    animacion = FuncAnimation(figura, actualizar_plot, interval=100) # FuncAnimation se encarga de "animar" algo con un intervalo de tiempo
+    # Y se guarda en una variable porque si no, python lo borra y no se actualiza el gráfico.
+
+    p.show()
 
 
 def spin_ros(nodo):
-    while rclpy.ok():
+    """
+    Método encargado de ejecutar el nodo una vez y con un timeout máximo de 0.01
+    """
+    while rclpy.ok(): # Mientras el nodo esté activo hacer spin_once
         rclpy.spin_once(nodo, timeout_sec=0.01)
 
 
-def main():
+if __name__ == "__main__":
+
     rclpy.init()
     nodo = NodoVentana()
 
-    # Iniciar el hilo de ROS
-    thread_ros = threading.Thread(target=spin_ros, args=(nodo,), daemon=True)
-    thread_ros.start()
+    # Iniciamos el thread de ros2
+    hilo_ros = threading.Thread(target = spin_ros, args = (nodo,), daemon = True)
+    hilo_ros.start()
 
-    # Iniciar visualización matplotlib (bloqueante)
+    # Visualización matplotlib
     try:
         iniciar_vista(nodo)
     finally:
         nodo.destroy_node()
         rclpy.shutdown()
-
-
-if __name__ == "__main__":
-    main()
