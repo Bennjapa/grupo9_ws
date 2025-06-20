@@ -1,0 +1,1 @@
+/home/benjaminuc/Desktop/grupo9_ws/build/lab3_grupo9/ament_cmake_environment_hooks/local_setup.bash

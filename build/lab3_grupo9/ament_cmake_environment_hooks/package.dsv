@@ -1,0 +1,4 @@
+source;share/lab3_grupo9/local_setup.bash
+source;share/lab3_grupo9/local_setup.dsv
+source;share/lab3_grupo9/local_setup.sh
+source;share/lab3_grupo9/local_setup.zsh

@@ -7,7 +7,13 @@
 /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/lib/lab2_grupo9/wall_dodger_p_controller.py
 /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/lib/lab2_grupo9/wall_distance.py
 /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/lib/lab2_grupo9/p_navigation_node.py
+/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/lib/lab2_grupo9/path_reader.py
+/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/lib/lab2_grupo9/follow_the_carrot.py
+/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/lib/lab2_grupo9/follower_ctrl.py
+/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/lib/lab2_grupo9/follower_navigation.py
+/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/lib/lab2_grupo9/demostracion.py
 /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9//launch/avanzar_y_rotar_ctrl.xml
+/home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9//launch/follow_the_carrot.xml
 /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9//launch/navegacion_pasillo.xml
 /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9//launch/pi_avanzar_y_rotar_ctrl.xml
 /home/benjaminuc/Desktop/grupo9_ws/install/lab2_grupo9/share/lab2_grupo9/posiciones.txt

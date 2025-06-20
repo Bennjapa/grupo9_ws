@@ -1,0 +1,17 @@
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/ament_index/resource_index/package_run_dependencies/lab3_grupo9
+-- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/ament_index/resource_index/parent_prefix_path/lab3_grupo9
+-- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/lab3_grupo9/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/lab3_grupo9/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/lab3_grupo9/environment/path.sh
+-- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/lab3_grupo9/environment/path.dsv
+-- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/lab3_grupo9/local_setup.bash
+-- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/lab3_grupo9/local_setup.sh
+-- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/lab3_grupo9/local_setup.zsh
+-- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/lab3_grupo9/local_setup.dsv
+-- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/lab3_grupo9/package.dsv
+-- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/ament_index/resource_index/packages/lab3_grupo9
+-- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/lab3_grupo9/cmake/lab3_grupo9Config.cmake
+-- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/lab3_grupo9/cmake/lab3_grupo9Config-version.cmake
+-- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/lab3_grupo9/package.xml

@@ -1,0 +1,15 @@
+/home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/ament_index/resource_index/package_run_dependencies/lab3_grupo9
+/home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/ament_index/resource_index/parent_prefix_path/lab3_grupo9
+/home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/lab3_grupo9/environment/ament_prefix_path.sh
+/home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/lab3_grupo9/environment/ament_prefix_path.dsv
+/home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/lab3_grupo9/environment/path.sh
+/home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/lab3_grupo9/environment/path.dsv
+/home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/lab3_grupo9/local_setup.bash
+/home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/lab3_grupo9/local_setup.sh
+/home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/lab3_grupo9/local_setup.zsh
+/home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/lab3_grupo9/local_setup.dsv
+/home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/lab3_grupo9/package.dsv
+/home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/ament_index/resource_index/packages/lab3_grupo9
+/home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/lab3_grupo9/cmake/lab3_grupo9Config.cmake
+/home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/lab3_grupo9/cmake/lab3_grupo9Config-version.cmake
+/home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/lab3_grupo9/package.xml
