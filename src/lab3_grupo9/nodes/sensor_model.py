@@ -9,13 +9,14 @@ from rclpy.node import Node
 from geometry_msgs.msg import Twist, PoseArray, Pose, Vector3
 from tf_transformations import euler_from_quaternion, quaternion_from_euler
 from threading import Thread, Event
-from nav_msgs.msg import Odometry
 from std_msgs.msg import Float64
 from nav_msgs.msg import OccupancyGrid
 from sensor_msgs.msg import LaserScan
 from std_msgs.msg import Empty
 from std_msgs.msg import String
 from math import sin, cos
+from rclpy.qos import QoSProfile, DurabilityPolicy
+
 
 class sensorModel(Node):
 
@@ -24,7 +25,7 @@ class sensorModel(Node):
 
         self.sigma = 0.02 #desviación estándar de la distribución normal, con 0.02 funciona decente
         self.zmax = 4.0 #[m], las lecturas validas estan en un rango de 57°
-        self.zhit = 0.2
+        self.zhit = 1
         self.field_ready = False #Hacemos esto para que no se active el range finder, antes del likelihood field
         self.posiciones_desocupadas = []
 
@@ -32,14 +33,14 @@ class sensorModel(Node):
         self.sens_x = 0.0 #[m]
         self.sens_y = 0.0 #[m]
 
-        ##Recibimos la información de los nodos
-        ##leer linea 57 
-        # self.map_sub = self.create_subscription(
-        #     OccupancyGrid,
-        #     "map",
-        #     self.recibir_mapa,
-        #     10
-        # )
+        latching_qos = QoSProfile(depth = 1, durability = DurabilityPolicy.TRANSIENT_LOCAL)
+        ##Recibimos la información de los nodos 
+        self.map_sub = self.create_subscription(
+            OccupancyGrid,
+            "/world_map",
+            self.recibir_mapa,
+            1
+        )
 
         self.laser = self.create_subscription(
             LaserScan,
@@ -47,17 +48,21 @@ class sensorModel(Node):
             self.recibir_laser,
             1
         )
-        self.origin = [0.0, 0.0, 0.0]
-        self.res = 0.006
-        self.occupied_tresh = 0.65
-        self.free_tresh = 0.196
-        self.likelihood_field("mapa.pgm")
 
-    ############################################################
-    #no me funciona el mapa, el tópico map como que no envia nada
-    #############################################################
-    # def recibir_mapa(self, data : OccupancyGrid):
-    #     self.get_logger().info("HOLAAAAAAAAAAAAAa")
+        # self.alto = 270
+        # self.ancho = 270
+        # self.res = 0.01
+        # self.origin = [0.0, 0.0, 0.0]
+        # self.occupied_tresh = 0.65
+        # self.free_tresh = 0.196
+        # self.likelihood_field("mapa.pgm")
+
+    def recibir_mapa(self, data : OccupancyGrid):
+        self.ancho = data.info.width
+        self.alto = data.info.height
+        self.res = data.info.resolution
+        self.origin = [data.info.origin.position.x, data.info.origin.position.y, 0.0]
+        self.likelihood_field("mapa.pgm")
 
     def likelihood_field(self, mapa:String):
         img = cv2.imread(mapa, cv2.IMREAD_GRAYSCALE) #Leemos la imagen
@@ -102,12 +107,10 @@ class sensorModel(Node):
             contador += 1
             
         #ahora visualizamos el mapa de densidades y ver si es que funciona :D
-        self.alto = alto
-        self.ancho = ancho
         self.field = field/field.max() #Normalizamos el campo para que el máximo de probabilidad sea 1
         self.field_ready = True #Indicamos que el campo esta listo
         self.get_logger().info("Estamos listos con el mapa :D")
-        field_norm = (self.field*255).astype(np.uint8)
+        field_norm = (self.field * 255).astype(np.uint8)
         #Mostramos el mapa
         cv2.imshow('Field', field_norm)
         cv2.waitKey(0)
@@ -118,31 +121,42 @@ class sensorModel(Node):
         self.angle_min = data.angle_min #ángulo minimio en el que mide el sensor
         self.increment = data.angle_increment #cada cuanto incrementa el angulo por medición
 
-        valores_verosimilitud = np.zeros((self.alto, self.ancho)) #array vacio, con donde puede estar el robot
-
         if self.field_ready: #Si esta listo el campo de distancias
+            valores_verosimilitud = np.zeros((self.alto, self.ancho)) #array vacio, con donde puede estar el robot
             for i in self.posiciones_desocupadas: #Probamos con todas las posiciones x,y desocupadas
                 q = self.likelihood_field_range_finder_model(mediciones, i, self.field) #obtenemos la probabilidad de la posición
-                valores_verosimilitud[i[0], i[1]] = q #Aqui guardamos en el mapa de verosimilitud la probabilidad de la posición (x,y)
-            a = (valores_verosimilitud * 255).astype(np.uint8) #Aqui transformamos a escala de grises
-            cv2.imshow('Pose?', a)
+                valores_verosimilitud[i[0], i[1]] = q #Aqui guardamos en el mapa de verosimilitud la probabilidad de la posición (y,x)
+            mapa_de_posicion = (valores_verosimilitud * 255).astype(np.uint8) #Aqui transformamos a escala de grises
+            cv2.imshow('Poses', mapa_de_posicion)
             cv2.waitKey(0)
             cv2.destroyAllWindows()
     
     def likelihood_field_range_finder_model(self, mediciones, pose, mapa):
-        theta = 0
+        theta = 0.0
         q = 1 #Inicio de la productoria
         angulo = self.angle_min #Angulo mínimo que mide el sensor
         for i in mediciones:
             if i != self.zmax:
                 x_real = pose[1]*self.res #Transformamos x a [m]
-                y_real = pose[0]*self.res #Transformamos y a [m]
+                y_real = (self.alto - pose[0] - 1)*self.res #Transformamos y a [m] y lo ponemos en coordenadas reales
                 #Aplicamos formulas de clases slide 38
                 x = x_real + self.sens_x*cos(theta) - self.sens_y*sin(theta) + i*cos(theta + angulo)
                 y = y_real + self.sens_y*cos(theta) + self.sens_x*sin(theta) + i*sin(theta + angulo)
-                if int(x/self.res) >= 0 and int(x/self.res) < 270 and int(y/self.res) >= 0 and int(y/self.res) < 270:
-                    prob = mapa[int(y/self.res), int(x/self.res)]
-                    q = q*(self.zhit * prob)
+
+                pixel_x = int(x / self.res) #Pasamos la posicion x del final del laser a pixeles
+                pixel_y = self.alto - int(y / self.res) - 1 #Pasamos la posicion y del final del laser a pixeles
+
+                if pixel_x < 0:
+                    pixel_x = 0
+                elif pixel_x > self.ancho - 1:
+                    pixel_x = self.ancho - 1
+                if pixel_y < 0:
+                    pixel_y = 0
+                elif pixel_y > self.alto - 1:
+                    pixel_y = self.alto - 1
+
+                prob = mapa[pixel_y, pixel_x]
+                q = q*(self.zhit * prob)
             angulo += self.increment #Sumamos el incremento para el siguiente ángulo
         return q
 
