@@ -88,7 +88,7 @@ class sensorModel(Node):
 
         for i in posiciones_ocupadas: #Recorremos las posiciones ocupadas
             distancias = np.zeros((alto, ancho)) #Hacemos un arreglo vacio para las distancias, desde cada pixel
-            n = 30 #Definimos cuantos pixeles recorremos en cada dirección en este caso es n*2 x n*2
+            n = 10 #Definimos cuantos pixeles recorremos en cada dirección en este caso es n*2 x n*2
 
             for y in range(i[0] - n, i[0]+ n):
                 for x in range(i[1] - n, i[1]+ n):
@@ -126,7 +126,11 @@ class sensorModel(Node):
             for i in self.posiciones_desocupadas: #Probamos con todas las posiciones x,y desocupadas
                 q = self.likelihood_field_range_finder_model(mediciones, i, self.field) #obtenemos la probabilidad de la posición
                 valores_verosimilitud[i[0], i[1]] = q #Aqui guardamos en el mapa de verosimilitud la probabilidad de la posición (y,x)
-            mapa_de_posicion = (valores_verosimilitud * 255).astype(np.uint8) #Aqui transformamos a escala de grises
+            valores_verosimilitud_normalizado = valores_verosimilitud / np.max(valores_verosimilitud) #Normalizamos el mapa de verosimilitud
+            mapa_de_posicion = (valores_verosimilitud_normalizado * 255).astype(np.uint8) #Aqui transformamos a escala de grises
+            # print("Máxima verosimilitud encontrada:", np.max(valores_verosimilitud_normalizado))
+            # print("Mínima verosimilitud encontrada:", np.min(valores_verosimilitud_normalizado))
+
             cv2.imshow('Poses', mapa_de_posicion)
             cv2.waitKey(0)
             cv2.destroyAllWindows()
@@ -135,8 +139,13 @@ class sensorModel(Node):
         theta = 0.0
         q = 1 #Inicio de la productoria
         angulo = self.angle_min #Angulo mínimo que mide el sensor
+        # print(angulo)      
+        rayos_validos = 0
+        FOV = 57 * np.pi / 180
         for i in mediciones:
-            if i != self.zmax:
+            if i != self.zmax and not np.isnan(i) and angulo < FOV/2 and angulo > -FOV/2:
+                rayos_validos += 1
+
                 x_real = pose[1]*self.res #Transformamos x a [m]
                 y_real = (self.alto - pose[0] - 1)*self.res #Transformamos y a [m] y lo ponemos en coordenadas reales
                 #Aplicamos formulas de clases slide 38
@@ -156,8 +165,16 @@ class sensorModel(Node):
                     pixel_y = self.alto - 1
 
                 prob = mapa[pixel_y, pixel_x]
-                q = q*(self.zhit * prob)
+                if prob > 0:
+                    q = q*(self.zhit * prob)
+                else:
+                    q *= 1e-6
+            
             angulo += self.increment #Sumamos el incremento para el siguiente ángulo
+        # print(angulo)
+        if rayos_validos == 0 or np.isnan(q):
+            q = 1e-6
+            
         return q
 
 
