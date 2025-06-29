@@ -9,7 +9,7 @@ from threading import Timer
 from nav_msgs.msg import Odometry
 from std_msgs.msg import Float64
 
-class p_navigation_node(Node):
+class navigation_node(Node):
     def __init__(self):
         super().__init__("p_navigation_node")
         self.max_v = 0.2 # [m/s] maxima velocidad lineal
@@ -56,7 +56,7 @@ class p_navigation_node(Node):
 
 if __name__ == "__main__":
     rclpy.init()
-    nodo = p_navigation_node()
+    nodo = navigation_node()
     rclpy.spin(nodo)
     nodo.destroy_node()
     rclpy.shutdown()
