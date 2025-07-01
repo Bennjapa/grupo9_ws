@@ -1,0 +1,11 @@
+<launch>
+
+  <include file="$(find-pkg-share very_simple_robot_simulator)/launch/minimal_simulator_py.xml" />
+  <include file="$(find-pkg-share very_simple_robot_simulator)/launch/lidar_simulator.xml" />
+  <include file="$(find-pkg-share very_simple_robot_simulator)/launch/world_state.xml" />
+
+<node pkg="my_pkg" exec="navegador_lab3.py" name="navigation_node" />
+<node pkg="my_pkg" exec="control_navegacion_lab3.py" name="controller" />
+<node pkg="my_pkg" exec="distancia_muro.py" name="wall_distance" />
+
+</launch>
