@@ -1,0 +1,18 @@
+<launch>
+
+  <node pkg="very_simple_robot_simulator" exec="kobuki_simulator.py" name="kobuki_simulator" output="screen" />
+
+  <node pkg="very_simple_robot_simulator" exec="lidar_simulator" name="lidar_simulator" >
+    <param name="effective_hfov" value="181.0" />
+    <param name="view_depth" value="20.0" />
+  </node>
+    
+  <node pkg="very_simple_robot_simulator" exec="world_state_gui.py" name="world_state_gui" output="screen" >
+    <param name="map_file" value="$(find-pkg-share proyecto_grupo_9_2025)/mapa_bodega.yaml" />
+  </node>
+  
+  <node pkg="tf2_ros" exec="static_transform_publisher" name="base_link_to_laser" args="--x 0.0 --y 0.0 --z 0.0 --roll 0.0 --pitch 0.0 --yaw 0.0 --frame-id base_link --child-frame-id laser" />
+  
+  <node pkg="rviz2" exec="rviz2" name="rviz" output="screen" />
+
+</launch>
