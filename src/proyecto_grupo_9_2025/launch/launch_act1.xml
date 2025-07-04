@@ -14,5 +14,16 @@
   <node pkg="tf2_ros" exec="static_transform_publisher" name="base_link_to_laser" args="--x 0.0 --y 0.0 --z 0.0 --roll 0.0 --pitch 0.0 --yaw 0.0 --frame-id base_link --child-frame-id laser" />
   
   <node pkg="rviz2" exec="rviz2" name="rviz" output="screen" />
+  
+  <node pkg="nav2_amcl" exec="amcl" name="amcl" >
+    <param name="global_frame_id" value="world_map" />
+    <param name="base_frame_id" value="base_link" />
+    <param name="odom_frame_id" value="odom" />
+    <param name="robot_model_type" value="nav2_amcl::DifferentialMotionModel" />
+    <param name="use_map_topic" value="true" />
+    <param name="map_topic" value="world_map" />
+    <param name="lase_max_beams" value="181" />
+    <param name="min_particles" value="250" />
+  </node>
 
 </launch>
