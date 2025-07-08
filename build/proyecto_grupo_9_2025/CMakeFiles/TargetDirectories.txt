@@ -1,0 +1,11 @@
+/home/benjaminuc/Desktop/grupo9_ws/build/proyecto_grupo_9_2025/CMakeFiles/uninstall.dir
+/home/benjaminuc/Desktop/grupo9_ws/build/proyecto_grupo_9_2025/CMakeFiles/proyecto_grupo_9_2025_uninstall.dir
+/home/benjaminuc/Desktop/grupo9_ws/build/proyecto_grupo_9_2025/CMakeFiles/ament_cmake_python_symlink_proyecto_grupo_9_2025.dir
+/home/benjaminuc/Desktop/grupo9_ws/build/proyecto_grupo_9_2025/CMakeFiles/ament_cmake_python_build_proyecto_grupo_9_2025_egg.dir
+/home/benjaminuc/Desktop/grupo9_ws/build/proyecto_grupo_9_2025/CMakeFiles/test.dir
+/home/benjaminuc/Desktop/grupo9_ws/build/proyecto_grupo_9_2025/CMakeFiles/edit_cache.dir
+/home/benjaminuc/Desktop/grupo9_ws/build/proyecto_grupo_9_2025/CMakeFiles/rebuild_cache.dir
+/home/benjaminuc/Desktop/grupo9_ws/build/proyecto_grupo_9_2025/CMakeFiles/list_install_components.dir
+/home/benjaminuc/Desktop/grupo9_ws/build/proyecto_grupo_9_2025/CMakeFiles/install.dir
+/home/benjaminuc/Desktop/grupo9_ws/build/proyecto_grupo_9_2025/CMakeFiles/install/local.dir
+/home/benjaminuc/Desktop/grupo9_ws/build/proyecto_grupo_9_2025/CMakeFiles/install/strip.dir

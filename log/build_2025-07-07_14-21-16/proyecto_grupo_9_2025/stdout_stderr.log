@@ -1,0 +1,62 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/benjaminuc/Desktop/grupo9_ws/build/proyecto_grupo_9_2025
+Built target ament_cmake_python_symlink_proyecto_grupo_9_2025
+running egg_info
+creating proyecto_grupo_9_2025.egg-info
+writing proyecto_grupo_9_2025.egg-info/PKG-INFO
+writing dependency_links to proyecto_grupo_9_2025.egg-info/dependency_links.txt
+writing top-level names to proyecto_grupo_9_2025.egg-info/top_level.txt
+writing manifest file 'proyecto_grupo_9_2025.egg-info/SOURCES.txt'
+reading manifest file 'proyecto_grupo_9_2025.egg-info/SOURCES.txt'
+writing manifest file 'proyecto_grupo_9_2025.egg-info/SOURCES.txt'
+Built target ament_cmake_python_build_proyecto_grupo_9_2025_egg
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/environment/pythonpath.sh
+-- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/environment/pythonpath.dsv
+-- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/local/lib/python3.10/dist-packages/proyecto_grupo_9_2025-0.0.0-py3.10.egg-info/PKG-INFO
+-- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/local/lib/python3.10/dist-packages/proyecto_grupo_9_2025-0.0.0-py3.10.egg-info/SOURCES.txt
+-- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/local/lib/python3.10/dist-packages/proyecto_grupo_9_2025-0.0.0-py3.10.egg-info/dependency_links.txt
+-- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/local/lib/python3.10/dist-packages/proyecto_grupo_9_2025-0.0.0-py3.10.egg-info/top_level.txt
+-- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/local/lib/python3.10/dist-packages/proyecto_grupo_9_2025/__init__.py
+-- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/launch/launch_act1.xml
+-- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/mapa_bodega.yaml
+-- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/mapa_bodega.pgm
+-- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/ament_index/resource_index/package_run_dependencies/proyecto_grupo_9_2025
+-- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/ament_index/resource_index/parent_prefix_path/proyecto_grupo_9_2025
+-- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/environment/ament_prefix_path.sh
+-- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/environment/ament_prefix_path.dsv
+-- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/environment/path.sh
+-- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/environment/path.dsv
+-- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/local_setup.bash
+-- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/local_setup.sh
+-- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/local_setup.zsh
+-- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/local_setup.dsv
+-- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/package.dsv
+-- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/ament_index/resource_index/packages/proyecto_grupo_9_2025
+-- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/cmake/proyecto_grupo_9_2025Config.cmake
+-- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/cmake/proyecto_grupo_9_2025Config-version.cmake
+-- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/package.xml
+Listing '/home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/local/lib/python3.10/dist-packages/proyecto_grupo_9_2025'...
+Compiling '/home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/local/lib/python3.10/dist-packages/proyecto_grupo_9_2025/__init__.py'...

@@ -25,5 +25,10 @@
     <param name="lase_max_beams" value="181" />
     <param name="min_particles" value="250" />
   </node>
+  
+  <include file="$(find-pkg-share nav2_bringup)/launch/navigation_launch.py">
+    <arg name="params_file" value="$(find-pkg-share proyecto_grupo_9_2025)/nav2_params.yaml"/>
+  </include>
+
 
 </launch>

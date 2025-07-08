@@ -64,8 +64,8 @@ class sensorModel(Node):
         self.origin = [data.info.origin.position.x, data.info.origin.position.y, 0.0]
         self.likelihood_field("mapa.pgm")
 
-    def likelihood_field(self, mapa:String):
-        img = cv2.imread(mapa, cv2.IMREAD_GRAYSCALE) #Leemos la imagen
+    def likelihood_field(self, mapa):
+        img = cv2.imread(mapa, cv2.IMREAD_GRAYSCALE)
         alto, ancho = img.shape #Obtenemos las dimensiones de la imagen
         posiciones_ocupadas = [] #Creamos una lista vacia para ingresar posiciones ocupadas
         for y in range(alto): #Recorremos la imagen, para ver las posiciones con obstaculos

@@ -1,0 +1,6 @@
+setup.py
+proyecto_grupo_9_2025/__init__.py
+proyecto_grupo_9_2025.egg-info/PKG-INFO
+proyecto_grupo_9_2025.egg-info/SOURCES.txt
+proyecto_grupo_9_2025.egg-info/dependency_links.txt
+proyecto_grupo_9_2025.egg-info/top_level.txt

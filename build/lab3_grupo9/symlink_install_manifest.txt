@@ -1,3 +1,5 @@
+/home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/lib/lab3_grupo9/sensor_model.py
+/home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/lab3_grupo9//launch/lab3_nav.xml
 /home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/ament_index/resource_index/package_run_dependencies/lab3_grupo9
 /home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/ament_index/resource_index/parent_prefix_path/lab3_grupo9
 /home/benjaminuc/Desktop/grupo9_ws/install/lab3_grupo9/share/lab3_grupo9/environment/ament_prefix_path.sh

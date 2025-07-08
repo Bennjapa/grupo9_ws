@@ -1,0 +1,3 @@
+source;share/proyecto_grupo_9_2025/environment/ament_prefix_path.sh
+source;share/proyecto_grupo_9_2025/environment/path.sh
+source;share/proyecto_grupo_9_2025/environment/pythonpath.sh

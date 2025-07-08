@@ -1,0 +1,18 @@
+[0.013s] Invoking command in '/home/benjaminuc/Desktop/grupo9_ws/build/lab3_grupo9': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/benjaminuc/Desktop/grupo9_ws/build/lab3_grupo9 -- -j12 -l12
+[0.047s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.138s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.147s] [31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/symlink_install/install.cmake:43 (_install):
+[0.147s]   _install does not recognize sub-command DESTINATION
+[0.147s] Call Stack (most recent call first):
+[0.147s]   CMakeLists.txt:22 (install)
+[0.148s] 
+[0.148s] [0m
+[0.148s] -- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.197s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.198s] -- Added test 'lint_cmake' to check CMake code style
+[0.198s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.199s] -- Added test 'xmllint' to check XML markup files
+[0.200s] -- Configuring incomplete, errors occurred!
+[0.200s] See also "/home/benjaminuc/Desktop/grupo9_ws/build/lab3_grupo9/CMakeFiles/CMakeOutput.log".
+[0.202s] gmake: *** [Makefile:226: cmake_check_build_system] Error 1
+[0.203s] Invoked command in '/home/benjaminuc/Desktop/grupo9_ws/build/lab3_grupo9' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/benjaminuc/Desktop/grupo9_ws/build/lab3_grupo9 -- -j12 -l12

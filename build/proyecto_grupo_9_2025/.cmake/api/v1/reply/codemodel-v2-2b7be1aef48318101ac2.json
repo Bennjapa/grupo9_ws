@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-03597f52aeb9eb5eb3c8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "proyecto_grupo_9_2025",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_proyecto_grupo_9_2025_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_proyecto_grupo_9_2025_egg-810af0939916e990f8ca.json",
+					"name" : "ament_cmake_python_build_proyecto_grupo_9_2025_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_symlink_proyecto_grupo_9_2025::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_symlink_proyecto_grupo_9_2025-b945429e33515c97bb97.json",
+					"name" : "ament_cmake_python_symlink_proyecto_grupo_9_2025",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "proyecto_grupo_9_2025_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-proyecto_grupo_9_2025_uninstall-1ceac44574d4d8f410ca.json",
+					"name" : "proyecto_grupo_9_2025_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-6e9c1de16280250d450e.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/benjaminuc/Desktop/grupo9_ws/build/proyecto_grupo_9_2025",
+		"source" : "/home/benjaminuc/Desktop/grupo9_ws/src/proyecto_grupo_9_2025"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

@@ -26,6 +26,7 @@ install(DIRECTORY launch DESTINATION share/${PROJECT_NAME})
 install(FILES
 	map/mapa_bodega.yaml
 	map/mapa_bodega.pgm
+	params/nav2_params.yaml
 	DESTINATION share/${PROJECT_NAME})
 
 if(BUILD_TESTING)

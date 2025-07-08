@@ -310,6 +310,12 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
+# install(PROGRAMS "nodes/sensor_model.py" "DESTINATION" "lib/lab3_grupo9")
+ament_cmake_symlink_install_programs("/home/benjaminuc/Desktop/grupo9_ws/src/lab3_grupo9" PROGRAMS "nodes/sensor_model.py" "DESTINATION" "lib/lab3_grupo9")
+
+# install(DIRECTORY "launch" "DESTINATION" "share/lab3_grupo9/")
+ament_cmake_symlink_install_directory("/home/benjaminuc/Desktop/grupo9_ws/src/lab3_grupo9" DIRECTORY "launch" "DESTINATION" "share/lab3_grupo9/")
+
 # install(FILES "/home/benjaminuc/Desktop/grupo9_ws/build/lab3_grupo9/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/lab3_grupo9" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/benjaminuc/Desktop/grupo9_ws/src/lab3_grupo9" FILES "/home/benjaminuc/Desktop/grupo9_ws/build/lab3_grupo9/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/lab3_grupo9" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
