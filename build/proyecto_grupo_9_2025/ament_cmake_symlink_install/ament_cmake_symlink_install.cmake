@@ -325,8 +325,8 @@ ament_cmake_symlink_install_directory("/home/benjaminuc/Desktop/grupo9_ws/src/pr
 # install(DIRECTORY "launch" "DESTINATION" "share/proyecto_grupo_9_2025")
 ament_cmake_symlink_install_directory("/home/benjaminuc/Desktop/grupo9_ws/src/proyecto_grupo_9_2025" DIRECTORY "launch" "DESTINATION" "share/proyecto_grupo_9_2025")
 
-# install(FILES "map/mapa_bodega.yaml" "map/mapa_bodega.pgm" "params/nav2_params.yaml" "DESTINATION" "share/proyecto_grupo_9_2025")
-ament_cmake_symlink_install_files("/home/benjaminuc/Desktop/grupo9_ws/src/proyecto_grupo_9_2025" FILES "map/mapa_bodega.yaml" "map/mapa_bodega.pgm" "params/nav2_params.yaml" "DESTINATION" "share/proyecto_grupo_9_2025")
+# install(FILES "map/mapa_bodega.yaml" "map/mapa_bodega.pgm" "params/nav2_params.yaml" "rviz/config1.rviz" "rviz/config2.rviz" "rviz/config3.rviz" "rviz/config4.rviz" "DESTINATION" "share/proyecto_grupo_9_2025")
+ament_cmake_symlink_install_files("/home/benjaminuc/Desktop/grupo9_ws/src/proyecto_grupo_9_2025" FILES "map/mapa_bodega.yaml" "map/mapa_bodega.pgm" "params/nav2_params.yaml" "rviz/config1.rviz" "rviz/config2.rviz" "rviz/config3.rviz" "rviz/config4.rviz" "DESTINATION" "share/proyecto_grupo_9_2025")
 
 # install(FILES "/home/benjaminuc/Desktop/grupo9_ws/build/proyecto_grupo_9_2025/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/proyecto_grupo_9_2025" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/benjaminuc/Desktop/grupo9_ws/src/proyecto_grupo_9_2025" FILES "/home/benjaminuc/Desktop/grupo9_ws/build/proyecto_grupo_9_2025/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/proyecto_grupo_9_2025" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

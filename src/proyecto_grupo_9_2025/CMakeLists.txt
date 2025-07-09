@@ -27,6 +27,10 @@ install(FILES
 	map/mapa_bodega.yaml
 	map/mapa_bodega.pgm
 	params/nav2_params.yaml
+	rviz/config1.rviz
+	rviz/config2.rviz
+	rviz/config3.rviz
+	rviz/config4.rviz
 	DESTINATION share/${PROJECT_NAME})
 
 if(BUILD_TESTING)

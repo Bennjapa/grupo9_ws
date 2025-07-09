@@ -6,9 +6,16 @@
 /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/local/lib/python3.10/dist-packages/proyecto_grupo_9_2025-0.0.0-py3.10.egg-info/top_level.txt
 /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/local/lib/python3.10/dist-packages/proyecto_grupo_9_2025/__init__.py
 /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/launch/launch_act1.xml
+/home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/launch/launch_act2.xml
+/home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/launch/launch_act3.xml
+/home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/launch/launch_act4.xml
 /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/mapa_bodega.yaml
 /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/mapa_bodega.pgm
 /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/nav2_params.yaml
+/home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/config1.rviz
+/home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/config2.rviz
+/home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/config3.rviz
+/home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/config4.rviz
 /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/ament_index/resource_index/package_run_dependencies/proyecto_grupo_9_2025
 /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/ament_index/resource_index/parent_prefix_path/proyecto_grupo_9_2025
 /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/environment/ament_prefix_path.sh

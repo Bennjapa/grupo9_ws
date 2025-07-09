@@ -1,0 +1,55 @@
+[0.015s] Invoking command in '/home/benjaminuc/Desktop/grupo9_ws/build/proyecto_grupo_9_2025': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/benjaminuc/Desktop/grupo9_ws/build/proyecto_grupo_9_2025 -- -j12 -l12
+[0.034s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.130s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.180s] -- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.227s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.227s] -- Added test 'lint_cmake' to check CMake code style
+[0.228s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.229s] -- Added test 'xmllint' to check XML markup files
+[0.230s] -- Configuring done
+[0.233s] -- Generating done
+[0.235s] -- Build files have been written to: /home/benjaminuc/Desktop/grupo9_ws/build/proyecto_grupo_9_2025
+[0.258s] Built target ament_cmake_python_symlink_proyecto_grupo_9_2025
+[0.406s] running egg_info
+[0.406s] writing proyecto_grupo_9_2025.egg-info/PKG-INFO
+[0.406s] writing dependency_links to proyecto_grupo_9_2025.egg-info/dependency_links.txt
+[0.406s] writing top-level names to proyecto_grupo_9_2025.egg-info/top_level.txt
+[0.408s] reading manifest file 'proyecto_grupo_9_2025.egg-info/SOURCES.txt'
+[0.408s] writing manifest file 'proyecto_grupo_9_2025.egg-info/SOURCES.txt'
+[0.425s] Built target ament_cmake_python_build_proyecto_grupo_9_2025_egg
+[0.432s] Invoked command in '/home/benjaminuc/Desktop/grupo9_ws/build/proyecto_grupo_9_2025' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/benjaminuc/Desktop/grupo9_ws/build/proyecto_grupo_9_2025 -- -j12 -l12
+[0.433s] Invoking command in '/home/benjaminuc/Desktop/grupo9_ws/build/proyecto_grupo_9_2025': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/benjaminuc/Desktop/grupo9_ws/build/proyecto_grupo_9_2025
+[0.438s] -- Install configuration: ""
+[0.438s] -- Execute custom install script
+[0.438s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/environment/pythonpath.sh
+[0.438s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/environment/pythonpath.dsv
+[0.438s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/local/lib/python3.10/dist-packages/proyecto_grupo_9_2025-0.0.0-py3.10.egg-info/PKG-INFO
+[0.438s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/local/lib/python3.10/dist-packages/proyecto_grupo_9_2025-0.0.0-py3.10.egg-info/SOURCES.txt
+[0.439s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/local/lib/python3.10/dist-packages/proyecto_grupo_9_2025-0.0.0-py3.10.egg-info/dependency_links.txt
+[0.439s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/local/lib/python3.10/dist-packages/proyecto_grupo_9_2025-0.0.0-py3.10.egg-info/top_level.txt
+[0.439s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/local/lib/python3.10/dist-packages/proyecto_grupo_9_2025/__init__.py
+[0.439s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/launch/launch_act1.xml
+[0.439s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/launch/launch_act2.xml
+[0.439s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/launch/launch_act3.xml
+[0.439s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/launch/launch_act4.xml
+[0.439s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/mapa_bodega.yaml
+[0.439s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/mapa_bodega.pgm
+[0.439s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/nav2_params.yaml
+[0.439s] -- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/config1.rviz
+[0.445s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/ament_index/resource_index/package_run_dependencies/proyecto_grupo_9_2025
+[0.445s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/ament_index/resource_index/parent_prefix_path/proyecto_grupo_9_2025
+[0.445s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/environment/ament_prefix_path.sh
+[0.445s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/environment/ament_prefix_path.dsv
+[0.445s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/environment/path.sh
+[0.446s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/environment/path.dsv
+[0.446s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/local_setup.bash
+[0.446s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/local_setup.sh
+[0.446s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/local_setup.zsh
+[0.446s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/local_setup.dsv
+[0.446s] -- Symlinking: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/package.dsv
+[0.452s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/ament_index/resource_index/packages/proyecto_grupo_9_2025
+[0.452s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/cmake/proyecto_grupo_9_2025Config.cmake
+[0.452s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/cmake/proyecto_grupo_9_2025Config-version.cmake
+[0.452s] -- Up-to-date symlink: /home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/share/proyecto_grupo_9_2025/package.xml
+[0.472s] Listing '/home/benjaminuc/Desktop/grupo9_ws/install/proyecto_grupo_9_2025/local/lib/python3.10/dist-packages/proyecto_grupo_9_2025'...
+[0.476s] Invoked command in '/home/benjaminuc/Desktop/grupo9_ws/build/proyecto_grupo_9_2025' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/benjaminuc/Desktop/grupo9_ws/build/proyecto_grupo_9_2025
